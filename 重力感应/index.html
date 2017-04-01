@@ -67,7 +67,6 @@
 
     function init(){
 
-
         if (window && window.DeviceOrientationEvent){
             window.addEventListener("deviceorientation", orientationHandler, false);
 
@@ -79,8 +78,7 @@
 
         document.getElementById("gamma").innerHTML = event.gamma||0;
 
-            $(".largeImg").css("margin-left",-mid+event.gamma*10+"px");
-
+            $(".largeImg").css("margin-left",(-mid+event.gamma*10<(-2*mid)?-2*mid:-mid+event.gamma*10>0?0:-mid+event.gamma*10)+"px");
 
     }
 
