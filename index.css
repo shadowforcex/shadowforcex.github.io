@@ -1,0 +1,13 @@
+html{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    box-sizing: border-box;
+
+}
+
+.linklineStyle{
+    height:2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-bottom:1px solid #cecece ;
+}
