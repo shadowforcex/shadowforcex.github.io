@@ -20,11 +20,13 @@
     var x = y = z = lastX = lastY = lastZ = 0;
     function deviceMotionHandler(eventData) {
 
-        alert("in");
+     
         var acceleration =eventData.accelerationIncludingGravity;
         x = acceleration.x;
         y = acceleration.y;
         z = acceleration.z;
+
+        alert(x+" "+y+" "+z);
         if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
             //简单的摇一摇触发代码
             alert(1);
