@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="jquery-1.11.3.min.js"></script>
 </head>
 <body>
 子页面
 
 <script>
+    $(document).ready(function(){
+        alert(1);
+    });
 
     if (window.DeviceMotionEvent) {
         window.addEventListener('devicemotion',deviceMotionHandler, false);
@@ -15,6 +19,8 @@
     var speed = 30;//speed
     var x = y = z = lastX = lastY = lastZ = 0;
     function deviceMotionHandler(eventData) {
+
+        alert("in");
         var acceleration =eventData.accelerationIncludingGravity;
         x = acceleration.x;
         y = acceleration.y;
