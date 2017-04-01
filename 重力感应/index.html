@@ -4,13 +4,30 @@
 <head>
     <meta charset="utf-8"/>
     <title>H5获取陀螺仪/重力感应(参考网上资源)</title>
+    <script src="../jslib/jquery-1.11.3.min.js"></script>
     <meta name="viewport"
           content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
     <style  type="text/css">
-        body{font-size: 24px;}
-        span{color:#f00;}
-        a{text-decoration: none;color:#f00;}
+        body{font-size: 16px;}
+        span{color:#666;}
+
         a:hover{color:#000;}
+        .imgOutter{
+            width:100%;
+            overflow: auto;
+        }
+        .imgOutter>img{
+            display: block;
+            width:auto;
+            height:100%;
+        }
+        .imgContainer{
+
+        }
+
+        ::-webkit-scrollbar {/*隐藏滚轮*/
+            display: none;
+        }
     </style>
 </head>
 
@@ -22,26 +39,48 @@
 -->
 
 <p>扭转：<span id="gamma">0</span></p>
-<div class="imgContainer">
+
 
     <div class="imgOutter">
-        <img src="">
+        <img class="largeImg" src="caoyuan-001.jpg">
     </div>
-</div>
+
 
 
 <script type="text/javascript">
+    var mid=0;
+    $(document).ready(function(){
 
-    init();
+        $(".largeImg").load(function(){
+            var innerWidth= $(".largeImg").width();
+            console.log(innerWidth);
+            var outterWidth= $(".imgOutter").width();
+            console.log(outterWidth);
+            mid= (innerWidth-outterWidth)/2;
+
+            $(".largeImg").css("margin-left",-mid+"px");
+            init();
+        });
+
+    })
+
+
     function init(){
 
-        if (window && window.DeviceOrientationEvent)
+
+        if (window && window.DeviceOrientationEvent){
             window.addEventListener("deviceorientation", orientationHandler, false);
+
+        }
+
     }
 
     function orientationHandler(event) {
 
         document.getElementById("gamma").innerHTML = event.gamma||0;
+
+            $(".largeImg").css("margin-left",-mid+event.gamma*10+"px");
+
 
     }
 
