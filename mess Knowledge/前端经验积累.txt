@@ -1,0 +1,1156 @@
+其实这里已经说的很明白，通俗点说就是在canvas中定义width、height跟在style中定义width和height是不同的，canvas标签的width和height是画布实际宽度和高度，绘制的图形都是在这个上面。而style的width和height是canvas在浏览器中被渲染的高度和宽度。如果canvas的width和height没指定或值不正确，就被设置成默认值(width:300px，height:150px)。
+
+
+
+html5 上传文件
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Files using XMLHttpRequest - Minimal</title>
+
+    <script type="text/javascript">
+      function fileSelected() {
+        var file = document.getElementById('fileToUpload').files[0];
+        if (file) {
+          var fileSize = 0;
+          if (file.size > 1024 * 1024)
+            fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+          else
+            fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+
+          document.getElementById('fileName').innerHTML = 'Name: ' + file.name;
+          document.getElementById('fileSize').innerHTML = 'Size: ' + fileSize;
+          document.getElementById('fileType').innerHTML = 'Type: ' + file.type;
+        }
+      }
+
+      function uploadFile() {
+        var fd = new FormData();
+        fd.append("fileToUpload", document.getElementById('fileToUpload').files[0]);
+        var xhr = new XMLHttpRequest();
+        xhr.upload.addEventListener("progress", uploadProgress, false);
+        xhr.addEventListener("load", uploadComplete, false);
+        xhr.addEventListener("error", uploadFailed, false);
+        xhr.addEventListener("abort", uploadCanceled, false);
+        xhr.open("POST", "UploadMinimal.aspx");
+        xhr.send(fd);
+      }
+
+      function uploadProgress(evt) {
+        if (evt.lengthComputable) {
+          var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+          document.getElementById('progressNumber').innerHTML = percentComplete.toString() + '%';
+        }
+        else {
+          document.getElementById('progressNumber').innerHTML = 'unable to compute';
+        }
+      }
+
+      function uploadComplete(evt) {
+        /* This event is raised when the server send back a response */
+        alert(evt.target.responseText);
+      }
+
+      function uploadFailed(evt) {
+        alert("There was an error attempting to upload the file.");
+      }
+
+      function uploadCanceled(evt) {
+        alert("The upload has been canceled by the user or the browser dropped the connection.");
+      }
+    </script>
+</head>
+<body>
+<form id="form1" enctype="multipart/form-data" method="post" action="upload.php">
+<div class="row">
+      <label for="fileToUpload">Select a File to Upload</label>
+<input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();"/>
+    </div>
+<div id="fileName"></div>
+<div id="fileSize"></div>
+<div id="fileType"></div>
+<div class="row">
+<input type="button" onclick="uploadFile()" value="Upload" />
+    </div>
+<div id="progressNumber"></div>
+</form>
+
+</body>
+</html
+
+//行列式 计算方法
+
+简单来说，如果C=AB的话，C中第a行b列的数为A的第a行乘上B的第b列
+比如说A=|a1 a2|  B=|b1 b2|
+        |a3 a4|    |b3 b4|
+那么C=|a1*b1+a2*b3  a1*b2+a2*b4|
+      |a3*b1+a4*b3  a3*b2+a4*b4|
+所以说如果是一个x1行x2列的矩阵乘上一个y1行y2列的矩阵，结果将是一个x1行y2列的矩阵
+这么说够直白吗
+
+
+ReactJS
+
+200230531
+
+svn账号  姓名全拼 密码同
+//-------------------------------------------
+draggable拖拽
+//-------------------------------------------
+js加密 crypto.js
+http://www.sharejs.com/codes/javascript/7311
+//-------------------------------------------html5 progress
+//-------------------------------------------
+cms框架 + wiki
+开发者门户网站
+//-------------------------------------------
+
+java后台使用filter来时先 restful转jsonp
+
+//-------------------------------------
+
+张伯函 3k 1月12日 回答
+HTTP GET方法不支持传body域，如果你指的是将JSON通过参数传递的话应该先将JSON进行URLEncode，即：
+
+var data = {'foo': 'bar'};
+var json_str = JSON.stringify(data);
+var encoded_param = encodeURIComponent(json_str); // 转码
+
+$http.get('/path', {
+    params: { encoded_param: userencoded_paramid }
+});
+通过Angular $http传递的话应该是
+
+xmlHttp.withCredentials ="true";//跨域
+
+$.ajax({
+   url: a_cross_domain_url,
+   // 将XHR对象的withCredentials设为true
+   xhrFields: {
+      withCredentials: true
+   }
+});
+
+
+//-------------------------------------------
+路由（Routing）
+由于{{outlet}}的内容是根据路由选择后动态获取的模板内容，所以我们先介绍Ember程序的路由，
+它可以帮助管理应该程序的状态和用户导航所需资源的资源；当我们的应用程序启动时，路由是负责显示模板，
+加载数据，以及管理应用程序的状态。
+
+//-------------------------------------------
+nodejs+grunt+bower+http-server
+
+http-server 网站 https://github.com/nodeapps/http-server
+
+单元测试工具 karma +jasmine
+
+karma官网: http://karma-runner.github.io/0.12/index.html
+
+jasmine官网https://jasmine.github.io/
+
+angularjs专门的测试工具 protractor
+https://github.com/angular/protractor
+https://code.google.com/p/selenium/wiki/WebDriverJs
+
+----------------------------------------
+Webstorm安装插件zen coding(Emmet)
+自设快捷键ctrl+alt+/
+-------------------------------------------------
+angularjs第三方框架
+angular-ui.github.io
+-----------------------------------------------
+
+div 换行
+word-wrap:break-word;word-break:break-all;
+--------------------------------------------
+css hack 兼容性问题
+--------------------------
+
+超出内容省略号
+  overflow: hidden;
+    text-overflow: ellipsis;
+--------------------------------
+
+-webkit-mask-image: linear-gradient(to right, #000, #000, 100px, transparent);
+文字渐变透明
+---------------------------------
+
+cookie
+
+var Cookies = {};   
+/**//**  
+ * 设置Cookies  
+ */  
+Cookies.set = function(name, value){   
+     var argv = arguments;   
+     var argc = arguments.length;   
+     var expires = (argc > 2) ? argv[2] : null;   
+     var path = (argc > 3) ? argv[3] : '/';   
+     var domain = (argc > 4) ? argv[4] : null;   
+     var secure = (argc > 5) ? argv[5] : false;   
+     document.cookie = name + "=" + escape (value) +   
+       ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +   
+       ((path == null) ? "" : ("; path=" + path)) +   
+       ((domain == null) ? "" : ("; domain=" + domain)) +   
+       ((secure == true) ? "; secure" : "");   
+};   
+/**//**  
+ * 读取Cookies  
+ */  
+Cookies.get = function(name){   
+    var arg = name + "=";   
+    var alen = arg.length;   
+    var clen = document.cookie.length;   
+    var i = 0;   
+    var j = 0;   
+    while(i < clen){   
+        j = i + alen;   
+        if (document.cookie.substring(i, j) == arg)   
+            return Cookies.getCookieVal(j);   
+        i = document.cookie.indexOf(" ", i) + 1;   
+        if(i == 0)   
+            break;   
+    }   
+    return null;   
+};   
+/**//**  
+ * 清除Cookies  
+ */  
+Cookies.clear = function(name) {   
+  if(Cookies.get(name)){   
+    var expdate = new Date();    
+    expdate.setTime(expdate.getTime() - (86400 * 1000 * 1));    
+    Cookies.set(name, "", expdate);    
+  }   
+};   
+  
+Cookies.getCookieVal = function(offset){   
+   var endstr = document.cookie.indexOf(";", offset);   
+   if(endstr == -1){   
+       endstr = document.cookie.length;   
+   }   
+   return unescape(document.cookie.substring(offset, endstr));   
+}; 
+//设置cookie值
+//Cookies.set("username","张三");
+
+//读取Cookies  
+//Cookies.get("username");
+
+----------------------------------------------------------
+
+js 中文乱码
+<script src="testpic.js"  charset="gbk"></script>
+------------------------------------------------------
+
+高频执行事件/方法的防抖
+
+通常，开发人员会在有用户交互参与的地方添加事件，而往往这种事件会被频繁触发。想象一下窗口的resize事件或者是一个元素的onmouseover事件 - 他们触发时，执行的非常迅速，并且触发很多次。如果你的回调过重，你可能使浏览器死掉。
+
+这就是为什么我们要引入防抖。
+
+防抖可以限制一个方法在一定时间内执行的次数。以下代码是个防抖示例：
+
+// 取自 UnderscoreJS 实用框架
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+  }
+
+// 添加resize的回调函数，但是只允许它每300毫秒执行一次
+window.addEventListener('resize', debounce(function(event) {
+
+    // 这里写resize过程
+
+}, 300));
+debounce方法返回一个方法，用来包住你的回调函数，限制他的执行频率。使用这个防抖方法，就可以让你写的频繁回调的方法不会妨碍用户的浏览器！
+
+前端防抖
+=-------------------------------------------
+easyUI的window包含一个iframe，在iframe中如何关闭window
+easyui      parent.$('#win').window('close');
+		window.parent.$('win').window('close');
+----------------------------------------------------------
+js map 删除key
+	var aaa={"aaa":1};
+	console.log(aaa);
+	delete aaa["aaa"];
+	console.log(aaa);
+----------------------------------------------		
+
+document.querySelector( '#fram1').contentDocument.querySelector( div.test' ).innerHTML
+
+--------------------
+使用CSS3的appearance属性改变元素的外观
+----------------------------
+
+background-attachment:fix 背景fix 不论滚动条如何滚动都在那个位置
+---------------------------
+contentType: "application/x-www-form-urlencoded;charset=utf-8"
+
+------------------
+js map使用
+var map = {}; // Map map = new HashMap();
+map[key] = value; // map.put(key, value);
+var value = map[key]; // Object value = map.get(key);
+var has = key in map; // boolean has = map.containsKey(key);
+delete map[key]; // map.remove(key);
+// 遍历  
+for(key in map){  
+    alert(key + map[key]);  
+}  
+//长度判断
+var length  = Object.keys(map).length ;
+-----------------------------
+
+
+html 设置 onselectstart="return false" 禁止选中网页
+如果页面元素需要选中 如div可编辑  就增加一个属性  onselectstart="event.stopPropagation()阻止冒泡就行了
+------------------------------------
+js控制 第一个form
+document.forms[0].target = "_self";
+document.forms[0].action = comm.permession.log.exportUrl;
+document.forms[0].opeator.value;//获取name=opeator的数据；（可以赋值）
+------------------------------------------------------------
+
+autocomplete="off"
+
+-------------------------------------
+display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+
+------------------
+white-space:nowarp;对中文有效，对英文无效，英文 需要加入以下2个属性
+1. word-break:break-all;只对英文起作用，以字母作为换行依据
+2. word-wrap:break-word; 只对英文起作用，以单词作为换行依据
+
+1. word-break:break-all;只对英文起作用，以字母作为换行依据
+2. word-wrap:break-word; 只对英文起作用，以单词作为换行依据
+3.white-space:pre-wrap; 只对中文起作用，强制换行
+4.white-space:nowrap; 强制不换行，都起作用
+5.white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现（部分浏览器支持）
+-------------------------------
+子frame内嵌 让父跳转
+		<script type="text/javascript">
+			if (window != top)
+				top.location.href = location.href;
+		</script>
+-----------------------------------------------
+302 错误
+遇到一个奇怪的问题，服务器发送重定向302的时候发现无法跳转。
+
+服务器方面应该是Apache+Tomcat6用mod_jk做的负载均衡，开了session粘性，没有用Tomcat集群。查了一下bug list好像也没看到有类似的问题。
+
+在客户端截包看，响应包是用的302重定向，但是却没有指定重定向地址的Location包头，这是诡异问题之一；问题二是在firebug里面显示协议用的是Http1.1，但302显示的附加信息是Moved Temporarily，但我记得在Http1.1里面 这个应该已经改成Found了，不知道为什么会同时出现两个不同版本的特性；另外在负载均衡中，也只有个别机器会一直出现这个情况，其他的也正常，应该不会是程序问题。
+
+维护的人只回答了一句，我重启了一台Tomcat，就好了。
+
+因为提供服务器维护的家伙死活不给我服务器具体的信息，更不要说让我看代码了，也就只知道这些，不知道不知道哪位oscer遇到过类似问题，知道根本原因的
+
+http://www.oschina.net/question/79551_112010
+----------------------------------------------
+
+连线 svg 或者 canvas
+--------------
+$('div','li')是$(子，父)，是从父节点里找子
+-----------------------------------
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+
+header 里加这个试试,一般装了chrome内核的浏览器会自动认,但是国产的就不知道了!只能问搜狗开发团队
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+---------------------------------------------
+
+在单独的javascript中不能使用<%= basePath%>类似这样的java  script所以，只能用javascript来获取此context path.
+可以用下面的代码来实现。
+
+var localObj = window.location;
+
+var contextPath = localObj.pathname.split("/")[1];
+
+var basePath = localObj.protocol+"//"+localObj.host+"/"+contextPath;
+
+var server_context=basePath;
+
+两种实现的方法用在不同的环境中
+---------------------------
+fiddler4
+拦截web的css js之类的文件，用本地文件替换。
+
+--------
+border-box	
+为元素设定的宽度和高度决定了元素的边框盒。
+就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+-----------------------------------------------
+
+https  8443端口；  https默认 443；
+------------------------------------------
+&lt;  <
+
+&lt;	<	小于号或显示标记
+&gt;	>	大于号或显示标记
+
+
+-------------------------------------------
+web components  web组件
+---------------------------------------
+table-layout:fixed 属性的解说
+这样 td标签就可以用 overflow:hidden了
+-------------------------------------------
+
+ng-grid
+
+-----
+EnPlaceholder插件支持密码框哦！实际对比同类的placeholder插件在ie等浏览器下效果做好！
+
+插件效果预览：http://www.wufangbo.com/demo/jquery/30/index.html
+
+EnPlaceholder的使用方法
+
+首先在head中分别引入jQuery及本插件
+
+1
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+2
+<script type="text/javascript" src="jquery.enplaceholder.js"></script>
+然后就可以调用就可以了
+
+1
+//通过value模拟placeholder
+2
+$('input').placeholder();
+3
+//通过插入元素模拟placeholder
+4
+$('input').placeholder({isUseSpan:true});
+下载插件：
+jQuery.EnPlaceholder.js
+//http://www.wufangbo.com/demo/jquery/30/jquery.enplaceholder.js
+------------------------------------------------------------------------
+
+
+genymotion  安卓模拟器
+android sdk
+android studio/eclipse
+cordova （phonegap）
+ionic
+
+--------------
+著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：张克军
+链接：https://www.zhihu.com/question/19823139/answer/13079933
+来源：知乎
+
+
+触发block formatting context即可，触发的方法：
+1.   float不为none
+2.   overflow不为visible
+3.   display设为‘table-cell’, ‘table-caption’, 或‘inline-block’
+4.   position既不是static也不是relative
+5.   zoom:1, IE的hasLayout特性会建立一个新的block formatting context
+
+----------------
+.clearit{
+    clear:both;
+    height:0 !important;
+    font-size:0;
+    overflow:hidden;
+}
+
+------------
+query动态添加option
+js动态添加option
+复制代码 代码如下:
+
+var sel= document.getElementById("Selected1"); 
+sel.options.add(new Option("请选择",""));
+sel.options.add(new Option("name","id"));
+jquery动态添加option
+复制代码 代码如下:
+
+$("#selectId").append("<option value='"+value+"'>"+text+"</option>");
+jquery移除所有option
+复制代码 代码如下:
+
+$("#selectedId option").remove();
+
+---------------------------
+获取 select 选中的option位置
+
+ $("#wsaeDevicType").find("option:selected")[0]["index"]; 
+
+------------
+comm_redirectIframe2( g_contextPath + '/jsp/ws/userCenter/modUserInfo.jsp' );
+
+-------------
+动态加载 放在 自治性函数内
+var head = window.top.document.querySelector('head');
+    var link = document.createElement('link');
+    link.href =  g_contextPath+"/style/ws/warning.css";
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+   
+    head.appendChild(link);
+
+-----------------------
+fafafa
+
+----
+思扬，不会写代码的女生不是好COSER / 远可攻近…
+知乎用户 赞同
+用到的是Icon Fonts技术，简单说就是你看到的图标实际上是字。
+直接提供几个资源。
+
+两篇教程：
+CSS3 icon font完全指南前端观察
+快速上手制作Icon Font
+
+两个常用图标库：
+Iconfont-阿里巴巴矢量图标库
+Fontello - icon fonts generator
+
+-------------------------------
+//文件上传
+
+function http(date,url,callback) {
+    function createXHttpRequest() {
+      if (window.ActiveXObject) {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      else if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      }
+      else {
+        return;
+      }
+    }
+ 
+    function starRequest(date) {
+      createXHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+          if (xmlhttp.status == 200) {
+            callback();
+            
+          }
+        }
+      };
+      xmlhttp.open("POST", url, true);
+      xmlhttp.send(date);
+    }
+    starRequest(date);
+  }
+var date = new FormData($("from[name='form1']")[0]);
+var url = "http://www.bt2magnet.com/upload.php";
+var callback = function(){};
+http(date,url,callback);
+
+-------------------------------------------------
+切换页面cancel掉了ajax的恶心问题。。。 http://www.cnblogs.com/ArthasCui/p/4017575.html
+        	if(error === 'abort'){
+                return;
+            }
+
+
+
+
+$.ajax({
+    url:'/test',
+    error:function(xhr,settings, error){
+        if(error === 'abort'){
+            return;
+        }
+        alert('some error');
+    }
+})
+
+//-----------------------css
+css 滤镜
+.blur {
+  filter: blur(6px);
+  -webkit-filter: blur(6px);  /* chrome, opera */
+  -ms-filter: blur(6px);
+  -moz-filter: blur(6px);
+  filter:progid:DXImageTransform.Microsoft.Blur(pixelRadius=6,   MakeShadow=false);   /*  IE6~IE9  */
+}
+//--------------------
+
+jquery判断checked的三种方法:
+.attr('checked):   //看版本1.6+返回:”checked”或”undefined” ;1.5-返回:true或false
+.prop('checked'): //16+:true/false
+.is(':checked'):    //所有版本:true/false//别忘记冒号哦
+jquery赋值checked的几种写法:
+所有的jquery版本都可以这样赋值:
+// $("#cb1").attr("checked","checked");
+// $("#cb1").attr("checked",true);
+jquery1.6+:prop的4种赋值:
+// $("#cb1″).prop("checked",true);//很简单就不说了哦
+// $("#cb1″).prop({checked:true}); //map键值对
+// $("#cb1″).prop("checked",function(){
+return true;//函数返回true或false
+});
+//记得还有这种哦:$("#cb1″).prop("checked","checked");
+
+//---------------------------------------------------------
+
+Cordova
+
+//-----------
+传参
+setTimeout(function(){getGetNameData(sendData);},10000);
+//---
+
+easyui 单机行
+
+/*		{field:'valid',title:'状态',width:100,align:'center',formatter:function(value, row, index){
+				return "操作";
+			}}
+			] ],
+			onClickCell:function(index,field,value){
+				if(field=="valid"){
+					window.location.href="${pageContext.request.contextPath}/jsp/comm/back/permession/role/roleAdd.jsp";
+				}
+			},*/
+----------------------------------------
+
+/*箭头向上*/
+.arrow-up {
+    width:0; 
+    height:0; 
+    border-left:30px solid transparent;
+    border-right:30px solid transparent;
+    border-bottom:30px solid #fff;
+}
+    
+ /*箭头向下*/
+.arrow-down {
+    width:0; 
+    height:0; 
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-top:20px solid #0066cc;
+}
+    
+ /*箭头向左*/
+.arrow-left {
+    width:0; 
+    height:0; 
+    border-top:30px solid transparent;
+    border-bottom:30px solid transparent; 
+    border-right:30px solid yellow; 
+}
+   
+/*箭头向右*/
+.arrow-right {
+    width:0; 
+    height:0; 
+    border-top:50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid green;
+}
+
+----------
+circleful
+
+-------
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+--------
+
+css3-animate-it是支持放大缩小、从不同方向渐变显示，旋转等CSS3CSS3动画特效集合。包括以下特效：bounceIn、bounceInDown、bounceInRight、bounceInUp、bounceInLeft、fadeInDown、fadeInUp、fadeInLeft、fadeInRight、fadeIn、growIn、shake、shakeUp、rotateIn、rotateInUpLeft、rotateInDownLeft、rotateInUpRight、rotateInDownRight、rollIn、wiggle、swing、tada、wobble、pulse、lightSpeedInRight、lightSpeedInLeft、flip、flipInX、flipInY
+----------------------------------------------
+背景图片全屏 居中(覆盖全屏)
+
+html,body{
+    height:100%;
+    padding: 0;
+    margin: 0%;
+}
+
+body{
+    background: url(../img/1/img1.png) no-repeat;
+    background-size:100%  100%;
+    background-position: center;
+}
+
+--------------
+
+定义和用法
+animation-fill-mode 属性规定动画在播放之前或之后，其动画效果是否可见。
+注释：其属性值是由逗号分隔的一个或多个填充模式关键词。
+默认值：	none
+继承性：	no
+版本：	CSS3
+JavaScript 语法：	object.style.animationFillMode=none
+语法
+animation-fill-mode : none | forwards | backwards | both;
+值	描述
+none	不改变默认行为。
+forwards	当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）。
+backwards	在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。
+both	向前和向后填充模式都被应用。
+
+
+----------------
+
+
+https://addons.mozilla.org/en-US/firefox/addon/scrapbook/
+
+
+--------------------------
+浮动后父容器无法自动撑开，给父容器 新增before和after;
+
+.benifitsLine:before,
+.benifitsLine:after {
+    content: "";
+    display: table;
+}
+.benifitsLine:after {
+    clear: both;
+}
+.benifitsLine {
+    *zoom: 1;
+}
+
+.benifitsLine>div{
+    float:left;
+}
+
+
+fis-plus
+
+架构的：node.js + mysql，前端：webpack + react
+
+--------
+前端别人的总结面试题 https://zhuanlan.zhihu.com/p/21408753
+----------
+select {
+    border: solid 1px #000;
+
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+
+    padding-right: 14px;
+
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+
+}
+
+
+select::-ms-expand { display: none; }
+
+
+html代码就是正常的select
+----------------------------------------------
+
+
+placeholder颜色 
+
+
+.container:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #dfdfdf;
+}
+
+.container::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #dfdfdf;
+}
+
+.container input:-ms-input-placeholder,
+.container textarea:-ms-input-placeholder {
+    color: #dfdfdf;
+}
+
+.container input::-webkit-input-placeholder,
+.container textarea::-webkit-input-placeholder {
+    color: #dfdfdf;
+}
+----------------------------------------------------
+手机简单 尺寸分类
+html{
+    font-size:100%;
+    height:100%;
+
+    font-family: "Microsoft YaHei";
+}
+
+@media (min-width:375px)  {
+    html{
+        font-size:20px;
+
+    }
+}
+
+@media (min-width:321px) and (max-width:375px) {
+    html{
+        font-size:16px;
+
+    }
+}
+
+@media (max-width:320px) {
+    html{
+        font-size:14px;
+
+    }
+}
+-------------------------------
+java -jar moco-runner-0.10.2-standalone.jar http -p 12306 -c foo.json
+
+----------------------
+setIntervel 改进
+
+
+function time(f, time) {
+    return function walk() {
+        setTimeout(function () {
+            f();
+            walk(); 
+        }, time);
+    };
+}
+ 
+time(updateFormat, 1000)();
+
+-------------------------------------
+setInterval 改进
+
+
+var timeoutId;
+
+var countdown = function () {  
+  // 时间到
+  if () { clearTimeout(timeoutId); }
+
+  // DOM操作
+  ...
+
+  timeoutId = setTimeout(countdown, 1000);
+};
+
+timeoutId = setTimeout(countdown, 1000);
+
+----------------------------------
+
+建议使用setTimeout代替setInterval，性能会好很多，实际效果也会更理想，可以google一下为什么(手机打字不方便)
+
+===========分隔线============
+
+让那么多人都踩了，内心不好受啊啊啊啊，那我详细补充一下，望能顶回来
+
+看代码:
+
+// 假设我要做个倒计时，以秒为单位
+setInterval(function () {
+  // DOM操作
+}, 1000)
+对于上面的代码，会有什么问题，我想很多人应该会不了解。
+
+基础知识补充：
+
+在javascript里会有个事件队列，按照先进先出(FIFO)的方式执行队列里的事件回调，又因为javascript是单线程的，所以在一个时间点上只能执行队列里的第一个事件回调，接下来的按推入时间顺序依次执行。
+setTimeout和setInterval注册的事件回调，依然是推入事件队列等待被执行。
+setTimeout和setInterval里的事件回调是什么时候推入事件队列呢？对于示例代码，它是在代码执行后的1000ms后才推入事件队列，然后等待执行。而不是先推入事件队列，然后等待1000ms后执行！
+总结：
+
+对于在计算量比较大，或事件触发比较频繁的业务里，事件队列的事件回调很可能会受到显著的延迟(延迟是必然的)。这时由于setInterval是不间断准时地往事件队列里推入事件回调，所以这里会导致一个很可能的问题，在事件队列里很可能有一大堆相邻的同个setInterval推入的事件回调，这最终导致事件回调之间的执行间隔不是1000ms，而是更小甚至10ms（这要看事件回调的代码计算量）
+
+在我的示例代码中，会出现的境况是，倒计时，一时很准确，一时跳跃很快变得很奇怪！
+
+改进代码:
+
+var timeoutId;
+
+var countdown = function () {  
+  // 时间到
+  if () { clearTimeout(timeoutId); }
+
+  // DOM操作
+  ...
+
+  timeoutId = setTimeout(countdown, 1000);
+};
+
+timeoutId = setTimeout(countdown, 1000);
+改进后，每秒之间的间隔将不会小于1000ms
+
+------------------------------------------------------------------
+
+css前缀补充工具
+http://leaverou.github.io/prefixfree/#
+prefixfree.js
+
+
+2：grunt-autoprefixer
+npm install autoprefixer -g  //安装 
+------------------------------
+正六边形  画法参考网页http://thefoxwp.com/icon-boxes-02/
+
+
+
+-----------
+低版本 浏览器 支持flex
+
+dispay:-webkit-box;
+
+box-pack: start|end|center|justify;
+
+-webkit-box-pack:
+
+
+----------------------------------
+
+ie中滚动条覆盖了内容
+为了触屏操作优化浏览器的内容显示，IE 浏览器提供了一种可以浮动显示，自动隐藏的滚动条样式，但是这个样式会在某些情况下造成一些困扰，比如下图。。。
+
+
+
+其实默认情况下，桌面版的 IE 应该是传统的滚动条样式；而在应用版的 IE 中，滚动条默认才是浮动显示，自动隐藏。
+
+但是可能会发现，一些使用了 bootstrap 样式的网站，也会出现相同这种情况，后来了解了下是因为bootstrap设置了一个属性
+
+@-ms-viewport {
+  width: device-width;
+}
+来源：http://channel9.msdn.com/Forums/Coffeehouse/IE10-how-does-the-scrollbar-autohide-on-buildwindowscom-microsoftcom
+
+如果想更改滚动条的样式，可以为 IE 浏览器强制设置一个样式：
+
+html, body {
+    -ms-overflow-style: scrollbar;
+}
+MSDN：https://msdn.microsoft.com/en-us/library/ie/hh771902(v=vs.85).aspx
+
+ 
+
+ps：
+
+参考网址：http://www.cnblogs.com/xwgli/p/4463184.html
+
+----------------------------------------------------------------------------
+li 前面的点 内联 如下
+
+·1233213
+123123123
+
+list-style-position:inside;}
+------------------------
+jQuery的touchstart,touchmove,touchend的获取位置
+
+     $('#webchat_scroller').on('touchstart',function(e) {
+
+      var touch = e.originalEvent.targetTouches[0]; 
+
+      var y = touch.pageY;
+
+      });
+
+ 
+
+ 
+
+      $('#webchat_scroller').on('touchmove',function(e) {
+
+      var touch = e.originalEvent.targetTouches[0]; 
+
+      var y = touch.pageY;
+
+      });
+
+     $('#webchat_scroller').on('touchend',function(e) {
+
+       var touch = e.originalEvent.changedTouches[0]; 
+
+      var y = touch.pageY;
+
+   });
+
+---------------------------------------------
+
+IE中在a标签里的图片会显示边框
+例如：
+
+<a><img src="/UI/Images/ss.jpg"></a>，图的边框会出现a标签默认的边框，
+
+解决办法：
+
+img{border:0 none},这样就可以了，注意两个一定都要写上去
+
+-----------------------------------------------
+
+http://docs.telerik.com/reporting/
+
+
+liyun@sfsctech.com
+
+---------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>移动端 css实现自适应正圆 ( 宽高随着手机屏幕宽度自适应 ) 博客园(杨君华)</title>
+</head>
+
+<style>
+    .adaptive-circle {
+        margin: 50px auto 0;
+        width: 80%;
+        height: 0;
+        padding-top: 80%;
+
+        border-radius: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+
+        position: relative;
+    }
+    .adaptive-circle .layout {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    .adaptive-circle .layout.middle:before {
+        display: inline-block;
+        vertical-align: middle;
+
+        content: '';
+        height: 100%;
+        width: 0;
+        overflow: hidden;
+    }
+    .adaptive-circle .layout.middle div:first-child {
+        display: inline-block;
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+    <div class="adaptive-circle">
+        <div class="layout middle">
+            <div>
+                <h2>自适应标题</h2>
+                <p>自适应介绍</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+----------------------------------------------------------
+
+https://github.com/xufei/blog
+
+http://www.jq22.com/jquery-info4495
+
+-----------
+https://github.com/ftlabs/fastclick
+解决手机300秒演示问题
+
+
+----------------------------------
+	ul li 结构
+    touchmove事件 获取当前元素 
+	
+//如果不是jquery 则删除originalEvent
+    $(".main").on("touchmove",_touch)
+
+    function _touch(event){
+
+        var element = document.elementFromPoint(event.originalEvent.changedTouches[0].pageX, event.originalEvent.changedTouches[0].pageY);
+        console.log(element);
+    }
+--------------------------------------------------
+
+http://www.360doc.com/content/15/0805/15/16163490_489671797.shtml
+
+---
+
+flv.js //html5视频开发
+
+
+
+----------
+
+https://zhuanlan.zhihu.com/study-fe  前端专栏
+
+
+https://zhuanlan.zhihu.com/p/24612841
+------------------
+
+$(document).ready(function(){
+    var asd=8;
+    console.log(`asd${asd}asd`);
+
+});
+
+
+引用 变量
+
+--------------------------
+
+ SMINT
+
+------------------------------
+
+
+禁止JQuery中的load方法装载IE缓存中文件的方法
+
+
+//在调用load方法之前利用该方法禁止load方法调用IE缓存文件 
+$.ajaxSetup ({ 
+cache: false 
+});
+
+
+
+-------------------------------------
+防止onload覆盖别人
+
+function addLoadEvent(func){
+var oldonload=window.onload;
+if(typeof window.onload!='function'){
+window.onload=func;
+}else{
+window.onload=function(){
+oldonload();
+func();
+}
+}
+}
+
+-----------------------------
+
+ 判断类型方法
+    Object.prototype.toString.call可以暂且认为是“功能最强大”的类型判断语句。在对数组类型进行判断时，需要格外小心，比如这样几个“陷阱”：
+    var a = [];
+    typeof a; // "object"
+    a instanceof Array; // true;
+    Object.prototype.toString.call(a); // "[object Array]"
+
+
+ --------------------------------------
