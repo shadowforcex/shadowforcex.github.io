@@ -38,3 +38,8 @@ a:active {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.linklineStyle>a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
