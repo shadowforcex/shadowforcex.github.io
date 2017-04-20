@@ -4,6 +4,9 @@ html{
     box-sizing: border-box;
     color:#666;
 }
+.body{
+    min-width: 1200px;
+}
 
 
 a:link {
@@ -31,4 +34,7 @@ a:active {
     line-height: 3rem;
     font-size: 1rem;
     border-bottom:1px solid #cecece ;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
