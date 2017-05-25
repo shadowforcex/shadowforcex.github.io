@@ -1,0 +1,68 @@
+#jWfxWarningPanel{
+    position: absolute;
+    top:50%;
+    left:15%;
+    margin-top: -5rem;
+
+    width: 70%;
+    min-height:10rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    opacity: 1;
+    /*padding:0.5rem 1.5rem ;*/
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 2rem;
+    overflow: scroll;
+    z-index: 1000001;
+
+}
+
+.jWfxWariningTextStyle{
+    /*width:350px;*/
+    text-align: left;
+    white-space: normal;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    min-height: 3rem;
+    padding: 1rem;
+}
+
+.panel-body{
+    /*height:100px;*/
+}
+.jWfxWariningBtnStyle{
+    width:5rem;
+    height:3rem;
+    background-color: #0080cc;
+    color:#fff;
+    margin: 0rem auto 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3rem;
+
+}
+.hidden{
+    display:none;
+}
+
+#jWfxWarningShadow{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+}
+
+.panel-heading{
+    text-align: center;
+    height:3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color: #0080cc;
+    color:#fff;
+}

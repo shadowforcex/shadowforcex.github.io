@@ -1,0 +1,88 @@
+.container{
+    position: relative;
+    background-color: #007FCC;
+
+    width:80%;
+
+    margin: 12rem auto 0 auto;
+    padding:1.5rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+}
+
+input{
+    border:none;
+    width:80%;
+    height: 100%;
+
+    outline: none;
+    text-indent: 10px;
+}
+
+
+.submitBtn{
+    width:100%;
+    margin: 2rem auto 0;
+    height:2rem;
+    line-height: 2rem;
+    background-color: #002786;
+    color:#fff;
+    text-align: center;
+    border-radius: 0.4rem;
+
+    font-size: 1rem;
+}
+
+.submitBtn.btnLock{
+    background-color:#dddddd ;
+}
+
+.p6Title{
+    color:#fde51b;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.p6TitleSmall{
+    color:#fde51b;
+    font-size: 1.2rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.p6text {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+
+}
+.p6textLine1{
+    border-top: 1px solid #fff;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.p6Input{
+    color:#fff;
+    font-size: 1rem;
+  line-height: 1.5rem;
+    height: 1.75rem;
+    margin-top:1.75rem;
+}
+
+.p6headImg{
+    position: absolute;
+    width: 16rem;
+    left: 50%;
+    margin-left: -8rem;
+    top:-5.5rem;
+}
+.p6headImg>img {
+    width:100%;
+}
+
+

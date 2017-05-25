@@ -1,0 +1,116 @@
+.titleImg{
+    width:60%;
+    margin: 1rem auto 2rem;
+}
+.titleImg>img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1000;
+}
+
+.lightUp,.getGift{
+    width: 62%;
+    margin: 0.5rem auto;
+    position: relative;
+    z-index: 1000;
+}
+.lightBg{
+    position: absolute;
+    width: 100%;
+    top:4rem;
+    opacity: 0.5;
+}
+
+.activityRules{
+    position: absolute;
+    width: 100%;
+    bottom:1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-decoration:underline;
+
+}
+
+
+.boxShadow{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    z-index: 1000;
+}
+
+.boxPanel{
+    position: absolute;
+    top:50%;
+    left:15%;
+    margin-top: -8rem;
+
+    width: 70%;
+    height:16rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    opacity: 1;
+    /*padding:0.5rem 1.5rem ;*/
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 2rem;
+    overflow: scroll;
+}
+.boxPanelContainer{
+    padding:0.5rem 1.5rem ;
+}
+.close{
+    position: absolute;
+    right: 15%;
+    top:20%;
+    width: 3rem;
+}
+.close>img{
+    width: 100%;
+}
+
+.boxPanelTitle{
+    text-align: center;
+    height:3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color: #0080cc;
+    color:#fff;
+}
+
+.clickBtn{
+    width:5rem;
+    height:3rem;
+    background-color: #0080cc;
+    color:#fff;
+    margin: 0rem auto;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+.boxPanel2{
+    margin-top: -5rem;
+    height:10rem;
+}
+.boxPanelContainer{
+    font-size: 1rem;
+}
+
+.arrow{
+    position: absolute;
+    top:0;
+    right: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    background: url("../img/arrow.png");
+    background-size: 100% 100%;
+    z-index:1000002;
+}

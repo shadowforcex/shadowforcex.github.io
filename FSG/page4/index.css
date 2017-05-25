@@ -1,0 +1,72 @@
+.headPic{
+
+    width: 70%;
+    margin: 3rem auto 1rem;
+}
+
+.headPic>img{
+    width: 100%;
+}
+
+.p3TextPart{
+    width: 70%;
+    margin: 1rem auto;
+}
+.p3TextPart>div{
+    float: left;
+}
+
+.p3Text{
+color:#fff;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.p3TextYellow{
+    color:#fde51b;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+.p3LeftPart{
+    width:72%
+}
+.p3RightPart{
+    width:28%;
+    position: relative;
+}
+.p3TextYellowSmall{
+    color:#fde51b;
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+    white-space: nowrap;
+    margin: 0.2rem;
+
+}
+
+.p3RightPart>img{
+    width:80%;
+}
+
+.spText{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -0.4rem;
+    margin-left: -2.1rem;
+    font-size: 1.1rem;
+    color:red;
+    font-weight: 600;
+
+}
+.QRCode{
+    width: 30%;
+    margin: 0 auto;
+}
+.QRCode>img{
+    width: 100%;
+}
