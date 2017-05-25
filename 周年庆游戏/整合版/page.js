@@ -74,7 +74,7 @@ function chagePageListener(e){
                        
                 },
                 error:function (){
-                    alert("net error");
+                    //alert("net error");
                 }
             });
             break;
@@ -173,7 +173,7 @@ function success(){
 
         },
         error:function (){
-            alert("net error");
+          //  alert("net error");
         }
     });
 
