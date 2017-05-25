@@ -1,0 +1,171 @@
+
+
+
+html{
+    font-family: "microsoft yahei";
+}
+
+.footer{
+    position: absolute;
+    bottom:0;
+    margin: 0;
+    width: 100%;
+    ;
+    box-sizing: border-box;
+}
+.panelOutter{
+    position: relative;
+    width:90%;
+    height:70%;
+    margin: 25% auto 0;
+    border-radius: 1rem;
+
+}
+.panel{
+    position: relative;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.QRCodeOutter{
+    margin: 3rem auto 0;
+    width:10rem;
+    height: 10rem;
+}
+
+.QRCodeOutter>img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.mainText,.QRText{
+    font-size: 1rem;
+    margin-top: 1.75rem;
+}
+.mainText{
+    margin-top: 1rem;
+}
+.QRText{
+    text-align: center;
+
+ }
+
+.mainText>span{
+    color: #E35191;
+}
+
+/*@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/!* ¼æÈÝiphone4/4s *!/*/
+    /*.QRCodeOutter{*/
+        /*margin: 1rem auto 0;*/
+
+    /*}*/
+/*}*/
+/*@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/!* ¼æÈÝiphone5 *!/*/
+    /*.QRCodeOutter{*/
+        /*margin: 2rem auto 0;*/
+
+    /*}*/
+/*}*/
+
+
+@media (min-width:376px)  {
+    .mainText,.QRText{
+        font-size: 1.125rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width:361px) and (max-width:375px) {
+    html{
+        font-size:16px!important;
+    }
+    .QRCodeOutter{
+        margin: 1rem auto ;
+        width:10rem;
+        height: 10rem;
+    }
+    .mainText,.QRText{
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+    }
+}
+@media (min-width:321px) and (max-width:360px) {
+    html{
+        font-size:16px!important;
+    }
+    .QRCodeOutter{
+        margin: 2rem auto 0;
+        width:10rem;
+        height: 10rem;
+    }
+}
+@media (max-width:320px) {
+    html{
+        font-size:14px !important;
+    }
+    .QRCodeOutter{
+        margin: 0rem auto ;
+        width:10rem;
+        height: 10rem;
+    }
+    .mainText,.QRText{
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-top: 0.5rem;
+    }
+    .mainText{
+        margin-top: 0.5rem;
+    }
+}
+
+
+.find{
+    width:50%;
+    height:5rem;
+    position: absolute;
+    top:-5rem;
+    background: url("img/find.png") no-repeat;
+    background-size: auto 80%;
+    background-position: center;
+}
+
+.run{
+    width:50%;
+    height:11rem;
+    left: 48%;
+    position: absolute;
+    top:-7rem;
+    background: url("img/run_2.png") no-repeat;
+    z-index: 0;
+
+    background-size: auto 80%;
+    background-position: center;
+}
+.find>img{
+    height: 4rem;;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.foot{
+    position: absolute;
+    z-index: 1000;
+    left:50%;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    overflow: hidden;
+    width: 22rem;
+    margin-left:-11rem;
+    bottom:1rem;
+}
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <link rel="stylesheet" href="lottery.css">
+</head>
+<body>
+
+    <div class="headTitle">
+        <img src="../img/lotteryTitle.png">
+    </div>
+    <div class="container">
+        <div class="lResLine1 lResLineStyle displayFlex">
+            <div class="resPartOutter">
+                <div class="resPart">
+                    <div class="imgOutter"><img src="../img/headIcon.jpg"></div>
+                    <div class="name">123312</div>
+                </div>
+            </div>
+            <div class="resPartOutter">
+                <div class="resPart">
+                    <div class="imgOutter"><img src="../img/headIcon.jpg"></div>
+                    <div class="name">123312</div>
+                </div>
+            </div>
+            <div class="resPartOutter">
+                <div class="resPart">
+                    <div class="imgOutter"><img src="../img/headIcon.jpg"></div>
+                    <div class="name">123312</div>
+                </div>
+            </div>
+        </div>
+        <div class="lResLine2 lResLineStyle displayFlex">
+            <div class="resPartOutter">
+                <div class="resPart">
+                    <div class="imgOutter"><img src="../img/headIcon.jpg"></div>
+                    <div class="name">123312</div>
+                </div>
+            </div>
+            <div class="resPartOutter">
+                <div class="resPart">
+                    <div class="imgOutter"><img src="../img/headIcon.jpg"></div>
+                    <div class="name">123312</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="headBottom">
+        <img src="../img/lotteryBottomText.png">
+    </div>
+<script>
+    caculatePading();
+    window.onresize= caculatePading;
+    function caculatePading(){
+        document.querySelector("body").style.paddingTop=document.querySelector("body").offsetHeight*0.1+"px";
+    }
+</script>
+</body>
+</html>

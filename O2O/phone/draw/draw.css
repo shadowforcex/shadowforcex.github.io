@@ -1,0 +1,133 @@
+html {
+    font-size: 16px;
+    height: 100%;
+    font-family: "microsoft yahei";
+    background-color: #05165c;
+    overflow: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: url(img/drawBg.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+@media (min-width: 376px) {
+    html {
+        font-size: 17px;
+
+    }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+    html {
+        font-size: 16px;
+
+    }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+
+.titleText{
+    width: 12rem;
+    height:2.7rem;
+    margin: 2rem auto;
+}
+.titleText>img{
+    width: 100%;
+    height:100%;
+}
+
+.mainContainer{
+    width:22rem;
+    height:31.867rem;
+    background:url(img/drawMainPic.png) no-repeat;
+    background-size: 100% 100%;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+
+.drawOutter{
+    background-color: #fff;
+    width:18.5rem;
+    height:18.5rem;
+    margin:8rem auto;
+    border-radius: 1rem;
+    position: relative;
+    padding:1rem;
+    box-sizing: border-box;
+}
+
+.drawPartStyle{
+    position: absolute;
+    width:8rem;
+    height:8rem;
+    line-height: 7.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size:7rem;
+}
+
+.drawPart1{
+    background-color:#2d8de1;
+    color:#4d9fe6;
+    top:1rem;
+    left:1rem;
+}
+
+
+.drawPart2{
+    background-color:#e79f17;
+    color:#e8af3b;
+    top:1rem;
+    left:9.5rem;
+}
+
+.drawPart3{
+    background-color:#01b983;
+    color:#2bc498;
+    top:9.5rem;
+    left:1rem;
+    font-size: 6.5rem;
+    line-height: 8rem;
+}
+
+
+.drawPart4{
+    background-color:#eb4a9a;
+    color:#ef67a9;
+    top:9.5rem;
+    left:9.5rem;
+}
+
+.drawName{
+    position: absolute;
+    width:6rem;
+    height:3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    left:50%;
+    top:50%;
+    margin-top: -1.5rem;
+    margin-left: -3rem;
+}
+

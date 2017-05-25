@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jslib/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<audio controls height="100" width="100" id="aaa">
+    <source src="5725.mp3" type="audio/mpeg">
+    <source src="5725.ogg" type="audio/ogg">
+    <embed height="50" width="100" src="5725.mp3">
+</audio>
+<select id="s"></select>
+<style>
+    /* entire container, keeps perspective */
+    .flip-container {
+        perspective: 1000;
+    }
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container, .front, .back {
+        width: 320px;
+        height: 480px;
+    }
+
+    /* flip speed goes here */
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    /* hide back of pane during swap */
+    .front, .back {
+        backface-visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* front pane, placed above back */
+    .front {
+        z-index: 2;
+        background-color: #003399;
+    }
+
+    /* back, initially hidden pane */
+    .back {
+        transform: rotateY(180deg);
+        background-color: #009900;
+    }
+</style>
+<div class="flip-container">
+    <div class="flipper"  onclick="aaa()">
+        <div class="front" >
+            <!-- 前面内容 -->
+            1
+        </div>
+        <div class="back">
+            <!-- 背面内容 -->
+            2
+        </div>
+    </div>
+</div>
+<script>
+    function aaa(){
+        document.querySelector("#aaa").play();
+    }
+    var option = new Option( "abc", "2312" );
+    document.all.s.options[0] = option;
+    var option2 = new Option( "def", "2312" );
+    document.all.s.options[1] = option2;
+    $("#s option")[1].selected=true;
+
+</script>
+</body>
+</html>

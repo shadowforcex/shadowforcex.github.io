@@ -1,0 +1,7 @@
+{
+  "date":"20160720",
+  "played":false,//是否是第一次玩
+  "following":false,//是否关注
+  "share":false,//是否分享
+  "leftTimes":3
+}

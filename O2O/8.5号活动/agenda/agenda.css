@@ -1,0 +1,219 @@
+html{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    width: 100%;
+    background-color: #06165c;
+}
+
+body{
+    background-image: url("../img/questionaire8.5.jpg");
+    background-repeat: no-repeat ;
+    background-size: 100% auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+@media (min-width:376px)  {
+    html{
+        font-size:17px;
+
+    }
+}
+
+@media (min-width:361px) and (max-width:375px) {
+    html{
+        font-size:15px;
+
+    }
+}
+
+@media (min-width:321px) and (max-width:360px) {
+    html{
+        font-size:15px;
+
+    }
+}
+@media (max-width:320px) {
+    html{
+        font-size:13px;
+    }
+}
+
+
+.progress{
+    width:18rem;
+    height:4.5rem;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    left:50%;
+    top:0.5rem;
+    margin-top:-2.25rem ;
+    margin-left:-9rem;
+}
+
+.progressPartStyle{
+    width:4.5rem;
+    height:4.5rem;
+    border-radius: 2.25rem;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+}
+.progressPartInnerStyle{
+    width:4rem;
+    height:4rem;
+    margin:0.25rem auto ;
+    border-radius: 2.05rem;
+    background-color:#3d6bb4  ;
+    display: table;
+    color:#7da5d6;
+    text-align: center;
+    line-height: 1rem;
+}
+.progressText{
+    margin-top: 1rem;
+}
+.progressLine{
+    width:2.25rem;
+    height:0.15rem;
+    background-color: #3d6bb4;
+    margin-top: 2.175rem;
+
+
+}
+.progressLine.onSelect{
+    background-color: #fff;
+}
+
+.progressPartStyle.onSelect{
+    background-color: #fff;
+}
+.progressQuestionaire{
+    background-color:rgba(85, 53, 222, 0.5)
+}
+.progressSnapshot{
+    background-color:rgba(5, 173, 156, 0.5);
+}
+.progressAgenda{
+    background-color:rgba(0, 129, 204, 0.5)
+}
+
+
+.onSelect.progressQuestionaire .progressPartInnerStyle{
+    background-color:rgb(85, 53, 222);
+    color:#fff;
+}
+
+.onSelect.progressSnapshot .progressPartInnerStyle{
+    background-color:rgb(5, 173, 156);
+    color:#fff;
+}
+
+.onSelect.progressAgenda .progressPartInnerStyle{
+    background-color:rgb(0, 129, 204);
+    color:#fff;
+}
+.a85containerOutter{
+    position: relative;
+    border-radius: 1rem;
+    /* height: 27rem; */
+    padding: 0.4rem;
+    width: 90%;
+    margin: 0 auto 2rem;
+    box-sizing: border-box;
+    /*box-shadow: 0 0 0.625rem rgba(37, 82, 248, .75);*/
+    background-color:rgba(7,150,233,0.1);
+    margin-top: 3rem;
+
+}
+
+
+.headKV {
+    position: relative;
+    width: 16rem;
+    height: 10.57rem;
+    background-image: url("../img/headKV.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    z-index: 1000;
+
+}
+
+.a85container{
+
+    border-radius: 1rem;
+    padding: 5rem 3rem 2rem;
+    width: 100%;
+
+    box-sizing: border-box;
+    background-color:rgba(7,150,233,0.2);
+
+}
+
+
+
+.agendaLine{
+    position: relative;
+    display:-webkit-flex;
+    display: flex;
+
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    line-height: 2.5rem;
+}
+
+.agendaLine .time{
+    color:#fff;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+}
+
+.agendaLine .activity{
+    color:#fff;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+}
+
+.specialPart{
+    width:95%;
+    margin-left: 5%;
+    margin:1rem 0 1rem 5%;
+}
+
+.white{
+    color:#fff;
+    line-height: 1.875rem;
+
+    font-size:0.875rem ;
+}
+
+.blue{
+   color:#13d6d1;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+
+}
+/*.specialPart .agendaLine{*/
+/*border-left: 1px solid #7da5d6; ;*/
+/*}*/
+
+/*.specialPart .agendaLine:last-child{*/
+    /*position: relative;*/
+    /*border-left: none !important;*/
+/*}*/
+/*.leftBorder{*/
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left:0;*/
+    /*width: 1px;*/
+    /*height:1rem;*/
+    /*background-color: #7da5d6;*/
+
+/*}*/
+.time{
+    text-align: right;
+}

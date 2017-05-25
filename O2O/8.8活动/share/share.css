@@ -1,0 +1,112 @@
+
+
+html{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    width:100%;
+    height:100%;
+    background-color: #0a60ff;
+}
+.displayFlex{
+    display: -webkit-flex;
+    display:flex;
+}
+body{
+    height:auto;
+    width:100%;
+    height:100%;
+    margin: 0;
+    background-image: url("../img/88-3-01.png");
+    background-repeat: no-repeat ;
+    background-size: auto 100%;
+    background-position: center;
+    box-sizing: border-box;
+    padding-top: 6rem;
+
+    background-color: #0a60ff;
+}
+
+@media (min-width:376px)  {
+    html{
+        font-size:17px;
+
+    }
+}
+
+@media (min-width:361px) and (max-width:375px) {
+    html{
+        font-size:16px;
+
+    }
+}
+@media (min-width:321px) and (max-width:360px) {
+    html{
+        font-size:15px;
+
+    }
+}
+@media (max-width:320px) {
+    html{
+        font-size:13px;
+    }
+}
+
+
+.shareLine{
+    text-align: center;
+    color:#fff;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.shareLine>span{
+    color:#fafc03;
+
+}
+.big{
+    font-size:1.25rem;
+}
+
+.box{
+    position: relative;
+    color:#fafc03;
+    text-align: center;
+    width:20.5rem;
+    height:5rem;
+    box-sizing: border-box;
+    border:2px solid #0181cc;
+    margin: 2rem auto 2rem;
+    padding:0.5rem;
+    border-radius: 3px;
+
+}
+.action{
+    font-size:1.5rem;
+    line-height: 2.875rem;
+}
+
+.arrow-down{
+    position: absolute;
+    top:100%;
+    left:50%;
+    margin-left: -20px;
+
+width: 0;
+height: 0;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-top: 20px solid #0181cc;
+font-size: 0;
+line-height: 0;
+}
+
+.imgOutter{
+    width:10rem;
+    height:10rem;
+
+    margin:  0 auto;
+}
+
+.imgOutter>img{
+    width: 100%;
+    height: 100%;
+}

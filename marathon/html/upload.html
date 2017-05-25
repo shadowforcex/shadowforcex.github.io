@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>上传</title>
+    <link rel="stylesheet" type="text/css" href="../css/zdliu.mobile.css">
+    <link rel="stylesheet" type="text/css" href="../css/mls.css">
+</head>
+<body class="ub">
+<div id="content" class="content ub-f1" style="overflow-x: hidden;overflow-y:auto;">
+    <div class="upload_top">
+        <div class="ub top_div1 ub-ver">
+            <img class="mls_02" src="../icons/mls_02.png">
+            <img class="mls_03" src="../icons/mls_03.png">
+        </div>
+        <img class="up_icon" src="../icons/up_icon.png">
+        <div class="clear"></div>
+    </div>
+    <div class="upload_con">
+        <div class="up_c_one ub ub-ac">
+            <div class="ub ub-f1 ub-ac upo_word">
+                上传炫酷头像<div class="up_btn"></div>
+            </div>
+            <img class="uh_img" src="../icons/uh_img.png">
+        </div>
+        <div class="up_c_two ub ub-ver">
+            <div class="two_title">亮出跑者宣言</div>
+            <textarea class="up_text" placeholder="(50字以内)"></textarea>
+            <div class="ub tip_div"><label>姓名</label><input class="up_tip ub-f1" type="text"></div>
+            <div class="ub tip_div"><label>公司</label><input class="up_tip  ub-f1" type="text"></div>
+            <div class="ub tip_div"><label>手机</label><input class="up_tip  ub-f1" type="text"></div>
+            <div class="ub tip_div"><label>身份证</label><input class="up_tip  ub-f1" type="text"></div>
+            <div class="up_explain">请留下您的简要信息哦，方便我们发放奖品。2015上海国际马拉松赛结束的次日，我们工作人员会与您联系，发放上马赛限量版纪念品哦!</div>
+        </div>
+    </div>
+    <div class="up_foot_btn" id="up_foot_btn">I’m Mr&Ms Run</div>
+</div>
+<div class="dialog_wei" id="dialog_wei" style="display: block;">
+    <img class="d_close" id="d_close" src="../icons/d_close.png">
+        <div class="wei_body">
+            <img class="up_wei" src="../icons/up_wei.png">
+            <img class="wf_wei" src="../icons/wf_wei.png">
+        </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    $("#up_foot_btn").click(function () {
+        $("#dialog_wei").show();
+    });
+    $("#d_close").click(function () {
+        $("#dialog_wei").hide();
+    });
+</script>
+</html>

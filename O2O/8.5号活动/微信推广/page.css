@@ -1,0 +1,151 @@
+html{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+
+    background-color: #06165c;
+}
+.displayFlex{
+    display: -webkit-flex;
+    display:flex;
+}
+body{
+    height:auto;
+    width:100%;
+    margin: 0;
+    background-image: url("../img/wexintgbg.jpg");
+    background-repeat: no-repeat ;
+    background-size: 100% auto;
+
+    background-color: #06165c;
+    padding-top: 15rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width:376px)  {
+    html{
+        font-size:17px;
+
+    }
+}
+
+@media (min-width:361px) and (max-width:375px) {
+    html{
+        font-size:16px;
+
+    }
+}
+@media (min-width:321px) and (max-width:360px) {
+    html{
+        font-size:15px;
+
+    }
+}
+@media (max-width:320px) {
+    html{
+        font-size:13px;
+    }
+}
+.title{
+    font-size: 1.5rem;
+    color:#fff;
+    text-align: center;
+    text-indent: 1px;
+
+}
+.title1{
+    color:#60ed9d;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lineStyle{
+    display: -webkit-flex;
+    display: flex;
+        line-height:1.875rem;
+    color:#fff;
+    padding:0 2rem 0 1rem;
+    /*letter-spacing: 1px;*/
+    font-size: 0.875rem;
+}
+.left{
+    position: relative;
+    width:22%;
+    line-height:1.875rem;
+    text-align: right;
+    color:#60ed9d;
+}
+.right{
+    width:78%;
+
+}
+.point{
+    position: absolute;
+    font-size: 2rem;
+    top:-0.1rem;
+    left:0.5rem;
+}
+
+
+.title2{
+    color:#0cfcdc;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.t2lineStyle{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    line-height:1.875rem;
+    color:#fff;
+    padding:0 5rem;
+    /*letter-spacing: 1px;*/
+
+}
+.title3{
+    color:#29d4f0;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.t3LineStyle{
+    position: relative;
+    line-height:1.875rem;
+    padding:0 1rem;
+    font-size: 0.875rem;
+
+    color:#fff;
+}
+
+.t3LineStyle>span{
+    color:#29d4f0;
+    text-indent: 1rem;
+}
+.t3LineStyle .point{
+    color: #29d4f0;
+}
+
+.imgOutter{
+    width:17.5rem;
+    height:12.46875rem;
+    margin: 1rem auto;
+}
+
+.imgOutter>img{
+    width: 100%;
+    height: 100%;
+}
+
+.lastLine{
+    text-indent: 4.7rem;
+    font-size: 0.875rem;
+
+    color:#fff;
+}
+

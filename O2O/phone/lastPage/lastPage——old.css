@@ -1,0 +1,73 @@
+html{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    height:100%;
+    background-color: #06165c;
+}
+
+
+html{
+    font-size:100%;
+    height:100%;
+
+    font-family: "Microsoft YaHei";
+}
+
+@media (min-width:376px)  {
+    html{
+        font-size:17px;
+
+    }
+}
+
+@media (min-width:361px) and (max-width:375px) {
+    html{
+        font-size:16px;
+
+    }
+}
+@media (min-width:321px) and (max-width:360px) {
+    html{
+        font-size:15px;
+
+    }
+}
+@media (max-width:320px) {
+    html{
+        font-size:13px;
+    }
+}
+
+.mainText{
+    position: relative;
+    width:20rem;
+    height:20rem;
+    background-image: url("../img/lastPageText.png");
+    background-size: 100% 100%;
+    margin: 20% auto;
+    z-index: 1000;
+}
+
+.mainLight{
+    position: absolute;
+    width:28rem;
+    height:28rem;
+    background-image: url("../img/lastPageBg.jpg");
+    background-size: 100% 100%;
+    top:10%;
+    left:50%;
+    margin-left: -14rem;
+    margin-top:-4rem;
+    z-index: 0;
+}
+
+.bottomText{
+    position: relative;
+    font-size:1rem;
+    color:#fff;
+    text-align: center;
+    margin-top: -2rem;
+    z-index: 1;
+
+}
+

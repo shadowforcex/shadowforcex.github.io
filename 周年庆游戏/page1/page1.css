@@ -1,0 +1,89 @@
+
+
+html {
+    font-size: 16px;
+    height: 100%;
+    font-family: "microsoft yahei";
+    background-color: #0a60ff;
+    overflow: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: url(../img/88-1-02.png) no-repeat;
+    background-size: 100% auto;
+    /*background-position: center;*/
+    overflow: hidden;
+}
+
+
+@media (min-width: 376px) {
+    html {
+        font-size: 17px;
+
+    }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+    html {
+        font-size: 15px;
+
+    }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+    html {
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+
+.page1Btn{
+    width:55%;
+    height:4rem;
+    line-height: 3.5rem;
+    margin:27rem auto 0;
+    text-align: center;
+    font-size: 1.75rem;
+    letter-spacing: 0.5rem;
+    color:#096bfc;
+    background-color: #fffd76;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    border:3px solid #fff;
+    box-shadow: 0 0 1.625rem #0bffff;
+
+
+
+    /*-webkit-text-stroke: 0.1px #fff;*/
+    /*-webkit-text-fill-color: #096bfc;*/
+}
+.rules>div{
+    text-align: left;
+    width:70%;
+    margin: 0 auto;
+    color:#fff;
+    line-height: 2rem;
+    font-size: 0.875rem;
+    font-family: "microsoft yahei light";
+}
+
+.rules .rl1{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-family: "microsoft yahei";
+}
+
+
+

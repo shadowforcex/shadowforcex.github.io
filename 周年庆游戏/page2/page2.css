@@ -1,0 +1,175 @@
+html {
+    font-size: 16px;
+    height: 100%;
+    font-family: "microsoft yahei";
+    background-color: #0a60ff;
+    overflow: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    height:100%;
+    background: url(../img/88-1-01.png) no-repeat;
+    background-size: 100% auto;
+    /*background-position: center;*/
+    overflow: hidden;
+}
+@font-face {
+    font-family: numberFontForGame;
+    src: url('../font/HelveticaNeueLTPro-UltLt.otf');
+}
+
+@media (min-width: 376px) {
+    html {
+        font-size: 17px;
+
+    }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+    html {
+        font-size: 16px;
+
+    }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+    html {
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+
+.titleText{
+    height:4rem;
+    line-height: 5rem;
+    width:22rem;
+    margin: 0 auto;
+    text-align: right;
+    /*color: #779ced;*/
+    color:rgba(255,255,255,.8);
+}
+.gameArea{
+    width:22rem;
+    height:34rem;
+    background-color: transparent;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border:1px solid #779ced;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.resultPart{
+    padding:1rem;
+    background-color: #0853e8;
+    border-radius: 1rem;
+}
+.rLineStyle{
+    height:5rem;
+    line-height: 6rem;
+    font-size:2rem;
+    font-family: "microsoft yahei light";
+    color:#e9effb;
+    letter-spacing: 0.1rem;
+}
+.rLine1{
+
+    border-bottom: 1px solid #779ced;
+    text-indent:1rem;
+    font-family: "numberFontForGame","microsoft yahei light";
+}
+.rLine2{
+    color:#fff600;
+    font-size: 3rem;
+    text-align: right;
+    margin-right: 0.75rem;
+    font-family: "numberFontForGame","microsoft yahei light";
+}
+.white{
+    color:#e9effb;
+}
+
+
+.clickPart{
+    padding:0.5rem 0.5rem;
+    height:24rem;
+    background: -webkit-linear-gradient(top,#0d82fe,#11B6FE);
+    border-radius: 1rem;
+    box-shadow:0 0 6px 1px rgba(0,0,0,0.3);
+
+}
+
+
+/* flip the pane when hovered */
+.animate{
+    transform: rotateY(180deg);
+}
+
+.clickStyle, .front, .back {
+    width:6.2rem;
+    height: 6.2rem;
+    line-height: 5.8rem;
+    border-radius: 1rem;
+}
+
+/* flip speed goes here */
+.clickStyle {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:2px solid #78d0f4;
+    box-sizing: border-box;
+    font-family: "numberFontForGame","microsoft yahei light";
+
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    background-color: transparent;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    background-color: transparent;
+    font-size: 3.5rem;
+    text-align: center;
+    color:#fff;
+}
+
+.clickLineStyle{
+    display: -webkit-flex;
+    display: flex;
+    justify-content:space-between;
+    margin-top:1.2rem
+}
+
+.clickLineStyle:first-child{
+    margin-top: 0;
+}
+
+.onSelect .back{
+    background-color: #cfe2ff;
+    color: #607ac4;
+}
+.onSelect .front,.onSelect .back{
+   border:2px solid #1c7de8
+}

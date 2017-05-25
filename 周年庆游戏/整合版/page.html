@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="page.css">
+    <script src="../jslib/jquery-1.11.3.min.js"></script>
+    <script src="page.js"></script>
+</head>
+<body>
+
+<div id="page1" class="">
+    <div id="page1Btn" class="page1Btn">开始游戏</div>
+    <div class="rules">
+        <div class="rl1">-游戏规则-</div>
+        <div class="rl2">1,选取任意数字，累加得到总和“88”即可</div>
+        <div class="rl3">2,按照完成时间计算成绩</div>
+    </div>
+</div>
+<div id="page2" class="hidden">
+    <audio controls height="0" width="0" id="clickSound" style="display: none">
+        <source src="../sound/click.mp3" type="audio/mpeg">
+        <!--<source src="../sound/click.ogg" type="audio/ogg">-->
+        <embed height="0" width="0" src="../sound/click.mp3">
+    </audio>
+    <audio controls height="0" width="0" id="cencelSound" style="display: none">
+        <source src="../sound/cencel.mp3" type="audio/mpeg">
+        <!--<source src="../sound/cencel.ogg" type="audio/ogg">-->
+        <embed height="0" width="0" src="../sound/cencel.mp3">
+    </audio>
+    <audio controls height="0" width="0" id="warnSound" style="display: none">
+        <source src="../sound/warnSound.mp3" type="audio/mpeg">
+        <!--<source src="../sound/warnSound.ogg" type="audio/ogg">-->
+        <embed height="0" width="0" src="../sound/warnSound.mp3">
+    </audio>
+    <div class="titleText">选取任意数字，累加得到总和“88”</div>
+    <div class="gameArea">
+        <div class="resultPart">
+            <div class="rLine1 rLineStyle"></div>
+            <div class="rLine2 rLineStyle"><span class="white">= </span><span class="res">0</span> / 88</div>
+        </div>
+        <div class="clickPart">
+            <div class="clickLineStyle">
+
+                <div class="cPart1 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+
+                <div class="cPart2 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+                <div class="cPart3 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="clickLineStyle">
+
+                <div class="cPart4 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+
+                <div class="cPart5 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+                <div class="cPart6 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="clickLineStyle">
+
+                <div class="cPart7 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+
+                <div class="cPart8 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+                <div class="cPart9 clickStyle">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="page3" class="hidden">
+    <div id="p3Inner">
+    <div class="p3HeadPic">
+        <div class="p3Title">本次挑战成绩:</div>
+        <div class="p3Res"><div class="p3ResNum">123</div><div class="p3Unit">秒</div></div>
+
+    </div>
+    </div>
+    <div id="p3PlayAgainBtn" class="p3PlayAgainBtn p3BtnStyle">再玩一次</div>
+    <div id="p3ShareBtn" class="p3ShareBtn p3BtnStyle">我要分享</div>
+</div>
+
+<div class="boxShadow hidden"></div>
+<div class="popWindow popWindowShare hidden">
+    <div class="popWindowClose"></div>
+    <div class="popWindowTextOutter ">
+        <div class="popWindowText  popWindowLine1">今天的挑战机会用完啦 </div>
+        <div class="popWindowText popWindowLine2">还想再玩？</div>
+        <div class="popWindowText">戳右上角，分享游戏？</div>
+        <div class="popWindowText">即可额外获得3次挑战机会？</div>
+    </div>
+</div>
+
+
+<div class="popWindow popWindowQRCode hidden">
+    <div class="popWindowClose"></div>
+    <div class="popWindowTextOutter ">
+        <div class="popWindowText  popWindowLine1">我是上海外服微助手</div>
+        <div class="popWindowText popWindowLine2">关注我吧!</div>
+        <div class="popWindowQRCodeImg"></div>
+        <div class="popWindowImgTextLine">上海外服微助手（服务号）</div>
+    </div>
+</div>
+
+
+<div class="popWindow popWindowOver hidden">
+    <div class="popWindowClose"></div>
+    <div class="popWindowTextOutter ">
+        <div class="popWindowText  popWindowLine1">今天的挑战机会用完啦 !</div>
+        <div class="popWindowText popWindowLine2">请明天继续</div>
+    </div>
+</div>
+
+<div class="popShareImg hidden"></div>
+<div class=" boxShadowShare hidden"></div>
+</body>
+</html>

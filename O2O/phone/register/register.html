@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <link  rel="stylesheet"  href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inputLine displayFlex">
+            <div class="inputTitle">公司：</div>
+            <div class="inputContainer"><input class="company noBorderInput" placeholder="请输入公司名"></div>
+        </div>
+
+        <div class="inputLine displayFlex">
+            <div class="inputTitle specialTitle">所属业务中心：</div>
+            <div class="selectContainer">
+                <select>
+                    <option class="hidden"></option>
+                    <option>选项1</option>
+                    <option>选项2</option>
+                    <option>选项3</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputLine displayFlex">
+            <div class="inputTitle">姓名：</div>
+            <div class="inputContainer"><input class="name noBorderInput" placeholder="请输入姓名"></div>
+        </div>
+        <div class="inputLine displayFlex">
+            <div class="inputTitle">职务：</div>
+            <div class="inputContainer"><input class="career noBorderInput" placeholder="请输入职务"></div>
+        </div>
+        <div class="inputLine displayFlex">
+            <div class="inputTitle">手机：</div>
+            <div class="inputContainer"><input class="tel noBorderInput" placeholder="请输入11位手机号"></div>
+        </div>
+        <div class="tipsLine">（请务必准确填写手机号码，确保现场互动畅通）</div>
+        <div class="inputLine displayFlex lastLine">
+            <div class="inputTitle">开车：</div>
+            <div class="inputContainer">
+                <input type="checkbox" id="checkboxDrive" class="drive" checked >
+                <label for="checkboxDrive"></label>
+                <div class="checkBoxSelect displayFlex">
+                    <div class="yes">是</div>
+                    <div class="no">否</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="submit">提交</div>
+</body>
+</html>
