@@ -8,14 +8,16 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(1.6);
+    alert(1.7);
 
 
     bgLoad("#bgImg1");
 
     bgLoad("#bgImg2");
     if (window && window.DeviceOrientationEvent){
-        window.addEventListener("deviceorientation",debounce(orientationHandler, 300) , false);
+        window.addEventListener("deviceorientation",debounce(function(event){
+            orientationHandler(event);
+        }, 100) , false);
     }
 
 });
