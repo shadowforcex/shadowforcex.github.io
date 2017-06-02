@@ -84,6 +84,6 @@ function orientationHandler(event) {
     var mid= (innerWidth-outterWidth)/2;
 
 
-    $(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
+    $(".onShow").find(".imgPart").css("left",(-mid+event.gamma*setupVal.speed<(-2*mid)?-2*mid:-mid+event.gamma*setupVal.speed>0?0:-mid+event.gamma*setupVal.speed)+"px");
 
 }
