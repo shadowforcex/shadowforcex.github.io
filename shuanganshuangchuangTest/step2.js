@@ -8,7 +8,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(1.4);
+    alert(1.5);
 
 
     bgLoad("#bgImg1");
@@ -82,18 +82,18 @@ function orientationHandler(event) {
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
     console.log(outterWidth);
     var mid= (innerWidth-outterWidth)/2;
-   //
-   // if(-mid+event.gamma*setupVal.speed<(-2*mid)  ){
-   //
-   //     $(".onShow").find(".imgPart").css("left",-2*mid);
-   // }
-   //else if(-mid+event.gamma*setupVal.speed>0){
-   //
-   //     $(".onShow").find(".imgPart").css("left",0);
-   // }else{
-   //     $(".onShow").find(".imgPart").css("left",-mid+event.gamma*setupVal.speed);
-   //
-   // }
-    $(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
+
+    if(-mid+event.gamma*setupVal.speed<(-2*mid)  ){
+
+        $(".onShow").find(".imgPart").css("left",-2*mid);
+    }
+   else if(-mid+event.gamma*setupVal.speed>0){
+
+        $(".onShow").find(".imgPart").css("left",0);
+    }else{
+        $(".onShow").find(".imgPart").css("left",-mid+event.gamma*setupVal.speed);
+
+    }
+    //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
 
 }
