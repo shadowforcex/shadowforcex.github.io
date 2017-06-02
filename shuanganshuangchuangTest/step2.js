@@ -82,8 +82,15 @@ function orientationHandler(event) {
     var outterWidth=  $(".onShow").find(".imgPart").closest(".mainOutter").width();
 
     var mid= (innerWidth-outterWidth)/2;
+    if(-mid+event.alpha*setupVal.speed<(-2*mid)  ){
+        $(".onShow").find(".imgPart").css("left",-2*mid);
+    }
+   else if(-mid+event.alpha*setupVal.speed>0){
+        $(".onShow").find(".imgPart").css("left",0);
+    }else{
+        $(".onShow").find(".imgPart").css("left",-mid+event.alpha*setupVal.speed);
 
-
-    $(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
+    }
+  //  $(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
 
 }
