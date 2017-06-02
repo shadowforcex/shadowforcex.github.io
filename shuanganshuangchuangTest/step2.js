@@ -8,7 +8,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(1.5);
+    alert(1.6);
 
 
     bgLoad("#bgImg1");
