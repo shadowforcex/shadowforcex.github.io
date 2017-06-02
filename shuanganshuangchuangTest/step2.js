@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     bgLoad("#bgImg2");
     if (window && window.DeviceOrientationEvent){
-        window.addEventListener("deviceorientation", orientationHandler, false);
+        window.addEventListener("deviceorientation",debounce(orientationHandler, 300) , false);
     }
 
 });
@@ -96,4 +96,24 @@ function orientationHandler(event) {
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
 
+
+
+
+
+}
+
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 }
