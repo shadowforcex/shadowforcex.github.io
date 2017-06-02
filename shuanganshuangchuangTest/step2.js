@@ -80,7 +80,7 @@ function orientationHandler(event) {
     var innerWidth=  $(".onShow").find(".bgImg").width();
 
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
-
+    console.log(outterWidth);
     var mid= (innerWidth-outterWidth)/2;
 
     if(-mid+event.alpha*setupVal.speed<(-2*mid)  ){
