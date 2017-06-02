@@ -77,9 +77,9 @@ function orientationHandler(event) {
 
    // document.getElementById("gamma").innerHTML = event.gamma||0;
 
-    var innerWidth=  $(".onShow").find(".imgPart").width();
+    var innerWidth=  $(".onShow").find(".bgImg").width();
 
-    var outterWidth=  $(".onShow").find(".imgPart").closest(".mainOutter").width();
+    var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
 
     var mid= (innerWidth-outterWidth)/2;
     console.log(-2*mid);
