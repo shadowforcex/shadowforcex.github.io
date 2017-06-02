@@ -2,7 +2,7 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:10,
+    speed:20,
 }
 
 
