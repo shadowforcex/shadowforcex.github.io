@@ -141,8 +141,8 @@ body {
     border-radius: 1rem;
 }
 .rLineStyle{
-    height:4rem;
-    line-height: 5rem;
+    height:5rem;
+    line-height: 6rem;
     font-size:2rem;
     font-family: "microsoft yahei light";
     color:#e9effb;
@@ -303,7 +303,7 @@ body {
 #page3 .p3ResNum{
     font-size: 5rem;
     color:#fef104;
-    /*background-color: #0650fd;*/
+    background-color: #0650fd;
 }
 
 #page3 .p3Unit{
