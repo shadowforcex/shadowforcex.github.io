@@ -2,13 +2,13 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:20,
+    speed:16,
 }
 
 
 $(document).ready(function(){
 
-    alert(1);
+    alert(1.1);
 
 
     bgLoad("#bgImg1");
