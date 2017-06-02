@@ -82,6 +82,7 @@ function orientationHandler(event) {
     var outterWidth=  $(".onShow").find(".imgPart").closest(".mainOutter").width();
 
     var mid= (innerWidth-outterWidth)/2;
+    console.log(-2*mid);
     if(-mid+event.alpha*setupVal.speed<(-2*mid)  ){
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
