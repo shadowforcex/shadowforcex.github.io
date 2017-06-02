@@ -2,13 +2,13 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:12,
+    speed:20,
 }
 
 
 $(document).ready(function(){
 
-
+    alert(1);
 
 
     bgLoad("#bgImg1");
@@ -88,7 +88,7 @@ function orientationHandler(event) {
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
    else if(-mid+event.gamma*setupVal.speed>0){
-      
+
         $(".onShow").find(".imgPart").css("left",0);
     }else{
         $(".onShow").find(".imgPart").css("left",-mid+event.gamma*setupVal.speed);
