@@ -84,11 +84,11 @@ function orientationHandler(event) {
     var mid= (innerWidth-outterWidth)/2;
 
     if(-mid+event.gamma*setupVal.speed<(-2*mid)  ){
-        alert(-2*mid);
+
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
    else if(-mid+event.gamma*setupVal.speed>0){
-        alert(2);
+      
         $(".onShow").find(".imgPart").css("left",0);
     }else{
         $(".onShow").find(".imgPart").css("left",-mid+event.gamma*setupVal.speed);
