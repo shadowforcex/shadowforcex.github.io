@@ -2,7 +2,7 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:10,
+    speed:5,
     touchMoveSpeedSet:0.5,
     beginGamma:0,
     touchMoved:false,
@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.3);
+    alert(3.4);
 
 
     bgLoad("#bgImg1");
@@ -92,31 +92,29 @@ function orientationHandler(event) {
 
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
     var mid=(innerWidth-outterWidth)/2;
-    var tempCenter=0;
+    var tempCenter= Number($(".onShow").find(".imgPart").css("left").replace("px",""));;
     if(setupVal.touchMoved==false){
 
         setupVal.touchMoved=true;
-
+        setupVal.beginGamma=event.gamma*setupVal.speed,
          tempCenter=mid;
 
-       // return false;
-    }else{
-        tempCenter= Number($(".onShow").find(".imgPart").css("left").replace("px",""));
+        return false;
     }
 
    // document.getElementById("gamma").innerHTML = event.gamma||0;
 
 
 
-    if(tempCenter+event.gamma*setupVal.speed<(-2*mid)  ){
+    if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)<(-2*mid)  ){
 
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
-   else if(tempCenter+event.gamma*setupVal.speed>0){
+   else if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)>0){
 
         $(".onShow").find(".imgPart").css("left",0);
     }else{
-        $(".onShow").find(".imgPart").css("left",tempCenter+event.gamma*setupVal.speed);
+        $(".onShow").find(".imgPart").css("left",tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma));
 
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
@@ -136,7 +134,7 @@ function touchMove(){
         //e.preventDefault();
 
         window.removeEventListener("deviceorientation", orientationHandler , false);
-        //setupVal.touchMoved=false
+        setupVal.touchMoved=false
         startX = e.originalEvent.changedTouches[0].pageX;
 
     });
