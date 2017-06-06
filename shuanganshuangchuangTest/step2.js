@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.2);
+    alert(3.3);
 
 
     bgLoad("#bgImg1");
@@ -99,7 +99,7 @@ function orientationHandler(event) {
 
          tempCenter=mid;
 
-        return false;
+       // return false;
     }else{
         tempCenter= Number($(".onShow").find(".imgPart").css("left").replace("px",""));
     }
@@ -108,15 +108,15 @@ function orientationHandler(event) {
 
 
 
-    if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)<(-2*mid)  ){
+    if(tempCenter+event.gamma*setupVal.speed<(-2*mid)  ){
 
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
-   else if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)>0){
+   else if(tempCenter+event.gamma*setupVal.speed>0){
 
         $(".onShow").find(".imgPart").css("left",0);
     }else{
-        $(".onShow").find(".imgPart").css("left",tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma));
+        $(".onShow").find(".imgPart").css("left",tempCenter+event.gamma*setupVal.speed);
 
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
