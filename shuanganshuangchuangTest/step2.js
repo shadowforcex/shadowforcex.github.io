@@ -9,7 +9,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(2.2);
+    alert(2.3);
 
 
     bgLoad("#bgImg1");
