@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(2.5);
+    alert(2.6);
 
 
     bgLoad("#bgImg1");
@@ -88,7 +88,8 @@ function changeMess(id){
 
 function orientationHandler(event) {
     if(setupVal.beginGamma==true){
-        setupVal.beginGamma=event.gamma*setupVal.speed
+        setupVal.beginGamma=event.gamma*setupVal.speed;
+        setupVal.beginGamma=false;
     }
    // document.getElementById("gamma").innerHTML = event.gamma||0;
 
@@ -124,7 +125,8 @@ function touchMove(){
 
         //e.preventDefault();
 
-        $(window).unbind();
+        window.removeEventListener("deviceorientation", orientationHandler , false);
+        setupVal.beginGamma=true;
         startX = e.originalEvent.changedTouches[0].pageX;
 
     });
