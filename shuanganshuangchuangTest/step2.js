@@ -2,7 +2,7 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:17,
+    speed:10,
     touchMoveSpeedSet:0.5,
     beginGamma:0,
     touchMoved:false,
