@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(2.7);
+    alert(2.8);
 
 
     bgLoad("#bgImg1");
@@ -90,6 +90,7 @@ function orientationHandler(event) {
     if(setupVal.firstTime==true){
         setupVal.beginGamma=event.gamma*setupVal.speed;
         setupVal.firstTime=false;
+        return;
     }
    // document.getElementById("gamma").innerHTML = event.gamma||0;
 
