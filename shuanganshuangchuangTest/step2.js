@@ -5,13 +5,14 @@ var setupVal={
     speed:17,
     touchMoveSpeedSet:0.5,
     beginGamma:0,
-    firstTime:true
+    touchMoved:false,
+    mid:0
 }
 
 
 $(document).ready(function(){
 
-    alert(2.8);
+    alert(3.0);
 
 
     bgLoad("#bgImg1");
@@ -87,27 +88,37 @@ function changeMess(id){
 }
 
 function orientationHandler(event) {
-    if(setupVal.firstTime==true){
-        setupVal.beginGamma=event.gamma*setupVal.speed;
-        setupVal.firstTime=false;
-        return;
-    }
-   // document.getElementById("gamma").innerHTML = event.gamma||0;
 
     var innerWidth=  $(".onShow").find(".bgImg").width();
 
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
-    var mid= (innerWidth-outterWidth)/2;
+    var mid=(innerWidth-outterWidth)/2;
+    var tempCenter=0;
+    if(setupVal.touchMoved==false){
 
-    if(-mid+(event.gamma*setupVal.speed- setupVal.beginGamma)<(-2*mid)  ){
+        setupVal.mid= (innerWidth-outterWidth)/2;
+        setupVal.touchMoved=true;
+
+         tempCenter=setupVal.mid;
+
+        return false;
+    }else{
+        tempCenter= Number($(".onShow").find(".imgPart").css("left").replace("px",""));
+    }
+
+   // document.getElementById("gamma").innerHTML = event.gamma||0;
+
+
+
+    if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)<(-2*mid)  ){
 
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
-   else if(-mid+(event.gamma*setupVal.speed- setupVal.beginGamma)>0){
+   else if(tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma)>0){
 
         $(".onShow").find(".imgPart").css("left",0);
     }else{
-        $(".onShow").find(".imgPart").css("left",-mid+(event.gamma*setupVal.speed- setupVal.beginGamma));
+        $(".onShow").find(".imgPart").css("left",tempCenter+(event.gamma*setupVal.speed- setupVal.beginGamma));
 
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
@@ -127,7 +138,7 @@ function touchMove(){
         //e.preventDefault();
 
         window.removeEventListener("deviceorientation", orientationHandler , false);
-        setupVal.firstTime=true;
+        setupVal.touchMoved=false
         startX = e.originalEvent.changedTouches[0].pageX;
 
     });
