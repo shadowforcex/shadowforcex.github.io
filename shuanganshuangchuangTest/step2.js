@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.1);
+    alert(3.2);
 
 
     bgLoad("#bgImg1");
@@ -136,7 +136,7 @@ function touchMove(){
         //e.preventDefault();
 
         window.removeEventListener("deviceorientation", orientationHandler , false);
-        setupVal.touchMoved=false
+        //setupVal.touchMoved=false
         startX = e.originalEvent.changedTouches[0].pageX;
 
     });
