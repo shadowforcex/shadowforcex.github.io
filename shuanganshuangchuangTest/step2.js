@@ -9,7 +9,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(2.3);
+    alert(2.4);
 
 
     bgLoad("#bgImg1");
@@ -52,16 +52,24 @@ function changeMess(id){
         if(  $(e.currentTarget).hasClass("leftArrow")  ){
             $(e.currentTarget).closest(".mainOutter").animate({left:0},0).animate({left:"100%"},500);
             $(e.currentTarget).closest(".mainOutter").prev().animate({left:"-100%"},0).animate({left:0},500);
-            $(".onShow").removeClass(".onShow");
+
+            $(".onShow").unbind();
+
+            $(".onShow").removeClass("onShow");
 
             $(e.currentTarget).closest(".mainOutter").prev().addClass("onShow");
         }else{
             $(e.currentTarget).closest(".mainOutter").animate({left:0},0).animate({left:"-100%"},500);
             $(e.currentTarget).closest(".mainOutter").next().animate({left:"100%"},0).animate({left:0},500);
-            $(".onShow").removeClass(".onShow");
+
+            $(".onShow").unbind();
+
+            $(".onShow").removeClass("onShow");
 
             $(e.currentTarget).closest(".mainOutter").next().addClass("onShow");
         }
+
+       touchMove();
        //
        //var innerWidth=  $(".onShow").find(".imgPart").width();
        //
