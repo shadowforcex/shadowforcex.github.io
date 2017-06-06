@@ -2,7 +2,7 @@
  * Created by shadowforce on 2017/6/1.
  */
 var setupVal={
-    speed:5,
+    speed:2,
     touchMoveSpeedSet:0.5,
     beginGamma:0,
     touchMoved:false,
@@ -11,7 +11,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.4);
+    alert(3.41);
 
 
     bgLoad("#bgImg1");
