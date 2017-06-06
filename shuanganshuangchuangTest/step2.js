@@ -3,13 +3,15 @@
  */
 var setupVal={
     speed:17,
-    touchMoveSpeedSet:0.5
+    touchMoveSpeedSet:0.5,
+    beginGamma:0,
+    firstTime:true
 }
 
 
 $(document).ready(function(){
 
-    alert(2.4);
+    alert(2.5);
 
 
     bgLoad("#bgImg1");
@@ -85,7 +87,9 @@ function changeMess(id){
 }
 
 function orientationHandler(event) {
-
+    if(setupVal.beginGamma==true){
+        setupVal.beginGamma=event.gamma*setupVal.speed
+    }
    // document.getElementById("gamma").innerHTML = event.gamma||0;
 
     var innerWidth=  $(".onShow").find(".bgImg").width();
@@ -93,15 +97,15 @@ function orientationHandler(event) {
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
     var mid= (innerWidth-outterWidth)/2;
 
-    if(-mid+event.gamma*setupVal.speed<(-2*mid)  ){
+    if(-mid+(event.gamma*setupVal.speed- setupVal.beginGamma)<(-2*mid)  ){
 
         $(".onShow").find(".imgPart").css("left",-2*mid);
     }
-   else if(-mid+event.gamma*setupVal.speed>0){
+   else if(-mid+(event.gamma*setupVal.speed- setupVal.beginGamma)>0){
 
         $(".onShow").find(".imgPart").css("left",0);
     }else{
-        $(".onShow").find(".imgPart").css("left",-mid+event.gamma*setupVal.speed);
+        $(".onShow").find(".imgPart").css("left",-mid+(event.gamma*setupVal.speed- setupVal.beginGamma));
 
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
@@ -119,6 +123,8 @@ function touchMove(){
     $(".onShow").on('touchstart', function (e) {
 
         //e.preventDefault();
+
+        $(window).unbind();
         startX = e.originalEvent.changedTouches[0].pageX;
 
     });
@@ -156,7 +162,9 @@ function touchMove(){
     $(".onShow").bind('touchend', function (e) {
         //  e.preventDefault();
 
-
+        if (window && window.DeviceOrientationEvent){
+            window.addEventListener("deviceorientation", orientationHandler , false);
+        }
 
     });
 
