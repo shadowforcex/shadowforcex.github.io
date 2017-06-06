@@ -3,12 +3,13 @@
  */
 var setupVal={
     speed:17,
+    touchMoveSpeedSet:0.5
 }
 
 
 $(document).ready(function(){
 
-    alert(2.1);
+    alert(2.2);
 
 
     bgLoad("#bgImg1");
@@ -17,6 +18,8 @@ $(document).ready(function(){
     if (window && window.DeviceOrientationEvent){
         window.addEventListener("deviceorientation", orientationHandler , false);
     }
+
+    touchMove();
 
 });
 function bgLoad(id){
@@ -80,7 +83,6 @@ function orientationHandler(event) {
     var innerWidth=  $(".onShow").find(".bgImg").width();
 
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
-    console.log(outterWidth);
     var mid= (innerWidth-outterWidth)/2;
 
     if(-mid+event.gamma*setupVal.speed<(-2*mid)  ){
@@ -102,3 +104,52 @@ function orientationHandler(event) {
 
 }
 
+
+
+function touchMove(){
+
+    $(".onShow").on('touchstart', function (e) {
+
+        //e.preventDefault();
+        startX = e.originalEvent.changedTouches[0].pageX;
+
+    });
+
+    $(".onShow").bind('touchmove', function (e) {
+        moveEndX = e.originalEvent.changedTouches[0].pageX;
+
+        var movedX = (moveEndX - startX)*setupVal.touchMoveSpeedSet;
+        var $ele=$(e.currentTarget);
+
+
+        var innerWidth=  $(".onShow").find(".bgImg").width();
+
+        var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
+        var mid= (innerWidth-outterWidth)/2;
+
+        var left=Number($(".onShow").find(".imgPart").css("left").replace("px",""));
+
+        if(movedX+left<(-2*mid)  ){
+
+            $(".onShow").find(".imgPart").css("left",-2*mid);
+        }
+        else if(movedX+left>0){
+
+            $(".onShow").find(".imgPart").css("left",0);
+        }else{
+            $(".onShow").find(".imgPart").css("left",movedX+left);
+
+        }
+
+
+        //   console.log(event);
+    });
+
+    $(".onShow").bind('touchend', function (e) {
+        //  e.preventDefault();
+
+
+
+    });
+
+}
