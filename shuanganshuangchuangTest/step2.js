@@ -6,13 +6,12 @@ var setupVal={
     touchMoveSpeedSet:0.5,
     beginGamma:0,
     touchMoved:false,
-    mid:0
 }
 
 
 $(document).ready(function(){
 
-    alert(3.0);
+    alert(3.1);
 
 
     bgLoad("#bgImg1");
@@ -96,10 +95,9 @@ function orientationHandler(event) {
     var tempCenter=0;
     if(setupVal.touchMoved==false){
 
-        setupVal.mid= (innerWidth-outterWidth)/2;
         setupVal.touchMoved=true;
 
-         tempCenter=setupVal.mid;
+         tempCenter=mid;
 
         return false;
     }else{
