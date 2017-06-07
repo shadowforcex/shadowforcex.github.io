@@ -12,7 +12,7 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.5);
+    alert(3.51);
 
     bgLoad("#bgImg1");
 
@@ -41,8 +41,10 @@ function bgLoad(id){
 
 
             changeMess(id);
+
+        //判断加载完成
         setupVal.loadComplete+=1;
-        if(setupVal.loadComplete==4){//4为加载的展墙数量
+        if(setupVal.loadComplete==4){//4为加载的展墙数
            $(".shadowPanel").addClass("hidden");
         }
 
@@ -124,9 +126,6 @@ function orientationHandler(event) {
 
     }
     //$(".onShow").find(".imgPart").css("left",(-mid+event.alpha*setupVal.speed<(-2*mid)?-2*mid:-mid+event.alpha*setupVal.speed>0?0:-mid+event.alpha*setupVal.speed)+"px");
-
-
-
 
 
 }
