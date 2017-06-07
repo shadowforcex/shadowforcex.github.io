@@ -1,0 +1,85 @@
+
+body {
+    margin: 0;
+    font-family: "microsoft yahei",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+
+    /*background-color:#bbbaba;*/
+    box-sizing: border-box;
+    height:100%;
+    background: url("img/indexBg.png") no-repeat;
+    overflow: hidden;
+    background-position:center bottom;
+    background-size: 80% auto;
+}
+
+.titleImg{
+    display: block;
+    width: 80%;
+    margin: 2rem auto 0;
+}
+
+.exhibition{
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto 0;
+}
+.btnOutter{
+    position: relative;
+    width:17rem;
+    height:6rem;
+
+   margin: 10% auto;
+}
+
+
+#part2{
+    left:10rem;
+}
+
+.animate {
+
+
+    animation: changeSize 2s infinite;
+
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes changeSize {
+    0% {
+        width: 7rem;
+        height: 7rem;
+        margin-left: 0rem;
+        margin-top:0rem
+    }
+    50% {
+        width: 6.5rem;
+        height:6.5rem;
+        margin-left: 0.25rem;
+        margin-top: 0.25rem
+    }
+    100%{
+        width: 7rem;
+        height: 7rem;
+
+    }
+}
+
+/*@keyframes changeSize {*/
+    /*0% {*/
+        /*width: 6.5rem;*/
+        /*height:6.5rem;*/
+        /*margin-left: 0.25rem;*/
+        /*margin-top: 0.25rem*/
+    /*}*/
+    /*100% {*/
+        /*width: 7rem;*/
+        /*height: 7rem;*/
+        /*margin-left: 0rem;*/
+        /*margin-top:0rem*/
+    /*}*/
+
+
+/*}*/

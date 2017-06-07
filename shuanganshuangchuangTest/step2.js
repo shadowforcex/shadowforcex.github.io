@@ -6,17 +6,20 @@ var setupVal={
     touchMoveSpeedSet:0.5,
     beginGamma:0,
     touchMoved:false,
+    loadComplete:0
 }
 
 
 $(document).ready(function(){
 
-    alert(3.41);
-
+    alert(3.5);
 
     bgLoad("#bgImg1");
 
     bgLoad("#bgImg2");
+
+    bgLoad("#bgImg3");
+    bgLoad("#bgImg4");
     if (window && window.DeviceOrientationEvent){
         window.addEventListener("deviceorientation", orientationHandler , false);
     }
@@ -38,7 +41,10 @@ function bgLoad(id){
 
 
             changeMess(id);
-
+        setupVal.loadComplete+=1;
+        if(setupVal.loadComplete==4){//4为加载的展墙数量
+           $(".shadowPanel").addClass("hidden");
+        }
 
     });
 
@@ -165,8 +171,6 @@ function touchMove(){
 
         }
 
-
-        //   console.log(event);
     });
 
     $(".onShow").bind('touchend', function (e) {

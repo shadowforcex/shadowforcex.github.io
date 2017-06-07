@@ -6,11 +6,16 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
     <title>展台全景图</title>
+    <link rel="stylesheet" href="mainCss/main.css">
     <link rel="stylesheet" href="step2.css">
     <script src="jslib/jquery-1.11.3.min.js"></script>
     <script src="step2.js"></script>
 </head>
 <body>
+<div class="shadowPanel">
+    <img class="shadowImg" src="img/loadingImg.png">
+    <div class="shadowLoading"><span>Loading</span><img src="img/loadingGif.gif"></div>
+</div>
 <div class="mainContainer">
     <div class="mainOutter onShow">
         <div class="imgPart">
@@ -23,6 +28,26 @@
     <div class="mainOutter">
         <div class="imgPart">
             <img id="bgImg2" class="bgImg" src="img/c2.jpg">
+            <div class="point1 pointStyle"></div>
+            <div class="leftArrow arrowStyle"> < </div>
+
+            <div class="rightArrow arrowStyle"> > </div>
+
+        </div>
+    </div>
+    <div class="mainOutter">
+        <div class="imgPart">
+            <img id="bgImg3" class="bgImg" src="img/c3.jpg">
+            <div class="point1 pointStyle"></div>
+            <div class="leftArrow arrowStyle"> < </div>
+
+            <div class="rightArrow arrowStyle"> > </div>
+
+        </div>
+    </div>
+    <div class="mainOutter">
+        <div class="imgPart">
+            <img id="bgImg4" class="bgImg" src="img/c4.jpg">
             <div class="point1 pointStyle"></div>
             <div class="leftArrow arrowStyle"> < </div>
 
