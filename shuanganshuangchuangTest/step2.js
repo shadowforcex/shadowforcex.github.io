@@ -16,13 +16,13 @@ $(document).ready(function(){
     $(".mainOutter").eq(window.location.hash==""?0:Number(window.location.hash.replace("#",""))-1).addClass("onShow");
 
 
-    bgLoad("#bgImg1");
-
-    bgLoad("#bgImg2");
-
-    bgLoad("#bgImg3");
-
-    bgLoad("#bgImg4");
+    //bgLoad("#bgImg1");
+    //
+    //bgLoad("#bgImg2");
+    //
+    //bgLoad("#bgImg3");
+    //
+    //bgLoad("#bgImg4");
 
 
     if (window && window.DeviceOrientationEvent){
