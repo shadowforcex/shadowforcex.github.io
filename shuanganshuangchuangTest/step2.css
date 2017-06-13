@@ -130,7 +130,7 @@ body {
     width:1.5rem;
     height:auto;
     vertical-align: middle;
-    margin: -0.2rem auto;
+    margin: -0.1rem auto;
 }
 
 .pointAnimate {
@@ -165,4 +165,117 @@ body {
 .point1{
     left:1rem;
     top:1rem;
+}
+
+
+#pointqianyan{
+    left: 45.5%;
+    top: 58%;
+
+}
+
+#pointdangzheng {
+    left: 17%;
+    top: 56%;
+}
+
+#pointdili{
+    left: 42%;
+    top: 56%;
+}
+
+#pointfazhi{
+    left: 80%;
+    top: 56%;
+}
+
+#pointzhihui{
+    left: 38%;
+    top: 49%;
+}
+
+#pointgongjian{
+    left: 55%;
+    top: 56%;
+}
+
+
+#pointjieshu{
+    left: 86%;
+    top: 56%;
+}
+
+#pointbeimian{
+    left: 81%;
+    top: 13%;
+
+}
+#pointIndex{
+    left: 5%;
+    top: 13%;
+}
+.shadowImgDisable{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 19% auto 0;
+}
+
+
+
+
+
+.partStyle {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgba(0, 110, 246, 0.4);
+    text-align: center;
+    border-radius: 10rem;
+    z-index:100;
+}
+
+.partInnerStyle {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 4rem;
+    color: #fff;
+    font-size: 1rem;
+    left: 50%;
+    top: 50%;
+    margin-top: -3rem;
+    margin-left: -3rem;
+    background-color: rgba(0, 110, 246, 1);
+    padding:1.5rem 0;
+    box-sizing: border-box;
+}
+
+@keyframes changeSize {
+    0% {
+        width: 8rem;
+        height: 8rem;
+        margin-left: 0rem;
+        margin-top:0rem
+    }
+    50% {
+        width: 6.5rem;
+        height:6.5rem;
+        margin-left: 0.75rem;
+        margin-top: 0.75rem;
+    }
+    100%{
+        width: 8rem;
+        height: 8rem;
+
+    }
+}
+.animate {
+
+
+    animation: changeSize 2s infinite;
+
+    animation-fill-mode: forwards;
 }

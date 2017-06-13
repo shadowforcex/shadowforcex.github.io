@@ -22,20 +22,20 @@ body {
 
 .exhibition{
     display: block;
-    width: 80%;
+    width: 90%;
     margin: 1.5rem auto 0;
 }
 .btnOutter{
     position: relative;
-    width:17rem;
+    width:18rem;
     height:6rem;
 
-   margin: 10% auto;
+   margin: 5% auto;
 }
 .partStyle {
     position: absolute;
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
     background-color: rgba(0, 110, 246, 0.4);
     text-align: center;
     border-radius: 10rem;
@@ -77,20 +77,20 @@ body {
 
 @keyframes changeSize {
     0% {
-        width: 7rem;
-        height: 7rem;
+        width: 8rem;
+        height: 8rem;
         margin-left: 0rem;
         margin-top:0rem
     }
     50% {
         width: 6.5rem;
         height:6.5rem;
-        margin-left: 0.25rem;
-        margin-top: 0.25rem
+        margin-left: 0.75rem;
+        margin-top: 0.75rem;
     }
     100%{
-        width: 7rem;
-        height: 7rem;
+        width: 8rem;
+        height: 8rem;
 
     }
 }

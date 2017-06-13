@@ -10,18 +10,23 @@
     <link rel="stylesheet" href="step2.css">
     <script src="jslib/jquery-1.11.3.min.js"></script>
     <script src="step2.js"></script>
+
 </head>
 <body>
-<div class="shadowPanel">
+<div class="shadowPanel loadingShadow">
     <img class="shadowImg" src="img/loadingImg.png">
     <div class="shadowLoading"><span>Loading</span><img src="img/loadingGif.gif"></div>
 </div>
+<div class="shadowPanel jinzhihenpingShadow hidden">
+    <img class="shadowImgDisable" src="img/jinzhihengping.jpg">
+    <div class="shadowLoading"><span>请用竖屏观看</span></div>
+</div>
 <div class="mainContainer">
-    <div class="mainOutter onShow">
+    <div class="mainOutter">
         <div class="imgPart">
             <img id="bgImg1" class="bgImg" src="img/c1.jpg">
-            <div id="part1" class="point1 pointStyle pointAnimate">
-                <div class="point1Inner pointInnerStyle"><a href="../../8.5号活动/agenda/agenda.html"><img src="img/enter.png"></a></div>
+            <div id="pointqianyan" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/qianyan.html#1"><img src="img/enter.png"></a></div>
             </div>
 
             <div class="rightArrow arrowStyle"> <img src="img/rightArrow.png"> </div>
@@ -30,7 +35,19 @@
     <div class="mainOutter">
         <div class="imgPart">
             <img id="bgImg2" class="bgImg" src="img/c2.jpg">
-            <div class="point1 pointStyle"></div>
+
+            <div id="pointdangzheng" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/dangzhengtongze.html#2"><img src="img/enter.png"></a></div>
+            </div>
+
+            <div id="pointdili" class="point1 pointStyle pointAnimate" >
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/diliqianxing.html#2"><img src="img/enter.png"></a></div>
+            </div>
+
+            <div id="pointfazhi" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/fazhibaozhang.html#2"><img src="img/enter.png"></a></div>
+            </div>
+
             <div class="leftArrow arrowStyle"> <img src="img/leftArrow.png"></div>
 
             <div class="rightArrow arrowStyle"> <img src="img/rightArrow.png"> </div>
@@ -40,7 +57,9 @@
     <div class="mainOutter">
         <div class="imgPart">
             <img id="bgImg3" class="bgImg" src="img/c3.jpg">
-            <div class="point1 pointStyle"></div>
+            <div id="pointzhihui" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/zhihuijianguan.html#3"><img src="img/enter.png"></a></div>
+            </div>
             <div class="leftArrow arrowStyle"> <img src="img/leftArrow.png"> </div>
 
             <div class="rightArrow arrowStyle"> <img src="img/rightArrow.png"></div>
@@ -50,13 +69,51 @@
     <div class="mainOutter">
         <div class="imgPart">
             <img id="bgImg4" class="bgImg" src="img/c4.jpg">
-            <div class="point1 pointStyle"></div>
+            <div id="pointgongjian" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/gongjiangongxiang.html#4"><img src="img/enter.png"></a></div>
+            </div>
+            <div id="pointjieshu" class="point1 pointStyle pointAnimate">
+                <div class="point1Inner pointInnerStyle"><a href="innerPage/jieshuyu.html#4"><img src="img/enter.png"></a></div>
+            </div>
+            <div id="pointbeimian" class=" partStyle animate">
+                <div class="point1Inner partInnerStyle"><a style="display: block;margin-top: 0rem;font-size: 1rem" href="innerPage/beimian.html#4">参观<br>背面</a></div>
+            </div>
+
+            <div id="pointIndex" class=" partStyle animate">
+                <div class="point1Inner partInnerStyle"><a style="display: block;margin-top: 0rem;font-size: 1rem" href="index.html">回到<br>首页</a></div>
+            </div>
             <div class="leftArrow arrowStyle"> <img src="img/leftArrow.png"> </div>
 
         </div>
     </div>
-
 </div>
+<audio id="audio" autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+       src="bgm/bgm.mp3" class="hidden">
+</audio>
 
+<script>
+    $(document).ready(function(){
+
+        $(window).on('touchstart', function (e) {
+
+
+            $("#audio")[0].play();
+
+
+        });
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+</script>
 </body>
 </html>

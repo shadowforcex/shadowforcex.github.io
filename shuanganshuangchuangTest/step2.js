@@ -12,24 +12,84 @@ var setupVal={
 
 $(document).ready(function(){
 
-    alert(3.51);
+    //alert(3.51);
+    $(".mainOutter").eq(window.location.hash==""?0:Number(window.location.hash.replace("#",""))-1).addClass("onShow");
+
 
     bgLoad("#bgImg1");
 
     bgLoad("#bgImg2");
 
     bgLoad("#bgImg3");
+
     bgLoad("#bgImg4");
+
+
     if (window && window.DeviceOrientationEvent){
         window.addEventListener("deviceorientation", orientationHandler , false);
     }
-
+    jinzhishuping();
     touchMove();
+
+    setTimeout(function(){
+        if(setupVal.loadComplete !=4){
+            alert("网速过慢10秒未全部加载完成");
+            $(".loadingShadow").addClass("hidden");
+            $("#bgImg1").closest(".imgPart").find(".arrowStyle" ).unbind();
+            $("#bgImg2").closest(".imgPart").find(".arrowStyle" ).unbind();
+            $("#bgImg3").closest(".imgPart").find(".arrowStyle" ).unbind();
+            $("#bgImg4").closest(".imgPart").find(".arrowStyle" ).unbind();
+
+            bgSetMid("#bgImg1");
+            bgSetMid("#bgImg2");
+            bgSetMid("#bgImg3");
+            bgSetMid("#bgImg4");
+
+            changeMess("#bgImg1");
+            changeMess("#bgImg2");
+            changeMess("#bgImg3");
+            changeMess("#bgImg4");
+        }
+
+    },10000);
 
 });
 function bgLoad(id){
 
+    console.log(id);
+
+    if($(id)[0].complete==true){
+        setupVal.loadComplete+= 1;
+
+        console.log(id+"in");
+
+
+        var innerWidth= $(id).width();
+
+        var outterWidth= $(id).closest(".mainOutter").width();
+
+        var mid= (innerWidth-outterWidth)/2;
+
+        $(id).closest(".imgPart").css("left",-mid+"px");
+
+
+        changeMess(id);
+
+        //判断加载完成
+
+
+        if(setupVal.loadComplete==4){//4为加载的展墙数
+            $(".loadingShadow").addClass("hidden");
+        }
+        return;
+    }
+
     $(id).load(function(e){
+
+        setupVal.loadComplete+= 1;
+
+        console.log(id+"in");
+
 
         var innerWidth= $(e.currentTarget).width();
 
@@ -43,15 +103,16 @@ function bgLoad(id){
             changeMess(id);
 
         //判断加载完成
-        setupVal.loadComplete+=1;
+
+
         if(setupVal.loadComplete==4){//4为加载的展墙数
-           $(".shadowPanel").addClass("hidden");
+           $(".loadingShadow").addClass("hidden");
         }
 
-    });
+   });
+
 
 }
-
 
 
 function changeMess(id){
@@ -96,6 +157,7 @@ function changeMess(id){
 
 function orientationHandler(event) {
 
+
     var innerWidth=  $(".onShow").find(".bgImg").width();
 
     var outterWidth=  $(".onShow").find(".bgImg").closest(".mainOutter").width();
@@ -137,6 +199,7 @@ function touchMove(){
     $(".onShow").on('touchstart', function (e) {
 
         //e.preventDefault();
+       // $("#audio")[0].play();
 
         window.removeEventListener("deviceorientation", orientationHandler , false);
         setupVal.touchMoved=false
@@ -181,4 +244,25 @@ function touchMove(){
 
     });
 
+}
+
+function  jinzhishuping(){
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+
+    function hengshuping() {
+        if (window.orientation == 90 || window.orientation == -90) {
+           $(".jinzhihenpingShadow").removeClass("hidden");
+        } else {
+            $(".jinzhihenpingShadow").addClass("hidden");
+        }
+    }
+}
+
+function bgSetMid(id){
+    var innerWidth= $(id).width();
+
+    var outterWidth= $(id).closest(".mainOutter").width();
+
+    var mid= (innerWidth-outterWidth)/2;
+    $(id).closest(".imgPart").css("left",-mid+"px");
 }

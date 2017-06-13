@@ -7,6 +7,7 @@
     <title>首页</title>
     <link rel="stylesheet" href="mainCss/main.css">
     <link rel="stylesheet" href="index.css">
+    <script src="jslib/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
@@ -22,9 +23,36 @@
 </div>
 
 <div id="part2" class="part1 partStyle animate">
-    <div class="part1Inner partInnerStyle"><a href="../../8.5号活动/agenda/agenda.html">食品安全<br>活动</a></div>
+    <div class="part1Inner partInnerStyle"><a href="http://webservicedev.efesco.com/sfsctechWechat/plug-in/IKKI/index.html">食品安全<br>活动</a></div>
 </div>
 </div>
+<audio id="audio" autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+       src="bgm/bgm.mp3" class="hidden">
+</audio>
+<script>
+    $(document).ready(function(){
 
+        $(window).on('touchstart', function (e) {
+
+
+            $("#audio")[0].play();
+
+
+        });
+
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+  </script>
 </body>
 </html>

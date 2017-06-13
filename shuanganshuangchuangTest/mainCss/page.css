@@ -1,0 +1,90 @@
+body{
+    height: 100%;
+    padding:0 1rem;
+}
+
+.innerPageTitle{
+    position:relative;
+    height:10%;
+    border-bottom:1px solid #efefef;
+    color:#0063f7;
+    font-size: 2rem;
+    vertical-align: bottom;
+
+}
+.innerTitleText{
+    position: absolute;
+    bottom:0.5rem;
+    left:0;
+    font-weight: 600;
+}
+.innerPageFooter{
+    height:10%;
+    position: relative;
+    border-top: 1px solid #efefef;
+}
+.innerPageContainerOutter{
+    height:80%;
+    overflow: auto;
+}
+.innerPageContainer{
+    line-height: 1.8rem;
+    color:#333;
+
+}
+.innerPageContainer p{
+  margin-top: 0.5rem;
+}
+.innerPageContainer img{
+    width: 100%;
+    margin: 1rem 0;
+    display: block;
+}
+
+.footerBtn{
+    position: absolute;
+    width:12rem;
+    height:2.5rem;
+    line-height: 2.5rem;
+    left: 50%;
+    top:50%;
+    margin-left: -6rem;
+    margin-top: -1.25rem;
+    border-radius: 0.5rem;
+    color:#fff;
+    background: #0079e4;
+    text-align: center;
+
+}
+
+
+.footerBtn >img{
+    width: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.textRight{
+    text-align: right;
+}
+
+.subTitle{
+    font-size: 1.4rem;
+    color:#0063f7;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+.innerPageContainer .smallImg{
+    display: block;
+    width:50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.imgText{
+    font-size: 0.625rem;
+    text-align: center;
+    line-height: 0.8rem;
+}
