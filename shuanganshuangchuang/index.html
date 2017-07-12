@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="mainCss/main.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="jslib/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<img class="titleImg" src="img/indexTitle.png">
+
+
+<img class="exhibition" src="img/exhibition.gif">
+
+
+<div class="btnOutter">
+<div id="part1" class="part1 partStyle animate">
+    <div class="part1Inner partInnerStyle"><a href="step2.html">展厅全景<br>展示</a></div>
+</div>
+
+<div id="part2" class="part1 partStyle animate">
+    <div class="part1Inner partInnerStyle"><a href="shipinanquan/index.html">食品安全<br>活动</a></div>
+</div>
+</div>
+<audio id="audio" autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+       src="bgm/bgm.mp3" class="hidden">
+</audio>
+<script>
+    $(document).ready(function(){
+
+        $(window).on('touchstart', function (e) {
+
+            $("#audio")[0].play();
+
+        });
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+  </script>
+</body>
+</html>

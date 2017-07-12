@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>“食品安全之旅” 全景图</title>
+     
+	<link type="text/css" href="css/main.css" rel="stylesheet">
+	<script src="js/libs/jquery-2.1.1.min.js"></script>
+	<script src="js/libs/jquery.tap.js"></script>
+
+	<!-- 必要元素 -->
+	<script src="js/libs/easeljs-0.8.2.min.js"></script>
+	<script src="js/libs/tweenjs-0.6.2.min.js"></script>
+	<!-- 必要元素 -->
+
+	<script src="js/libs/preloadjs-0.6.2.min.js"></script>
+	<script src="js/libs/TweenMax.min.js"></script>
+
+	<!-- 动画说明文件 -->
+	<script src="js/animate/loading.js"></script>
+	<script src="js/animate/movie.js"></script>
+	<!-- 动画说明文件 -->
+
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+	<script src="js/libs/iscroll.js"></script>
+
+	<script>
+		if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				var phoneScale = parseInt(window.screen.width)/640;
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		}else{
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+
+</head>
+
+<body>
+	<!-- display object -->
+
+	<div class="page">
+		<div class="cvsConter">
+			<div class="topic hide">
+				<img src="images/topic.jpg" />
+				<div class="titlepic">
+					<div><img src="images/cay1.png" /></div>
+					<div class="titleb"><img src="images/cay2.png" /></div>
+				</div>
+				<div class="slip"><img src="images/slip.png" /></div>
+			</div>
+
+			<canvas id="canvas"></canvas>
+			<div class="pmain hide"></div>
+			<div class="slidediv hide"></div>
+			<div class="pgbtm"><img src="images/bottom.jpg" /></div>
+			<div class="shareBtn"><a href="questions.html"><img src="images/sharebtn.png" /></a></div>
+
+			<div class="btnpos"></div>
+			<div class="poppos"></div>
+
+			<div class="conter hide contera cont1">
+				<div class="rulesnum">共五项条例</div>
+				<div class="closeDetail"></div>
+				<div id="wpr23" class="wprtxt">
+					<div class="contentxt2">第四十六条<br>
+						市、区人民政府应当制定食用农产品生产基地规划，加强食用农产品生产基地标准化建设。<br>
+						第四十七条<br>
+						在本市从事畜禽、畜禽产品生产经营活动的，应当遵守国家和本市有关法律、法规、规章的规定。<br>
+						第四十八条<br>
+						农药、兽药、饲料和饲料添加剂、肥料等农业投入品的经营者(以下简称农业投入品经营者)应当建立经营记录，如实记载购入农业投入品的名称、数量、进货日期和供货者名称、地址、联系方式，以及销售农业投入品的名称、数量、销售日期和购货者名称、地址、联系方式等内容。记录保存期限不得少于二年。<br>
+						第四十九条<br>
+						禁止在食用农产品生产经营活动中从事下列行为：<br>
+					　　(一)使用国家禁止使用的农业投入品;<br>
+					　　(二)超范围或者超剂量使用国家限制使用的农业投入品;<br>
+					　　(三)收获、屠宰、捕捞未达到安全间隔期、休药期的食用农产品;<br>
+					　　(四)对畜禽、畜禽产品灌注水或者其他物质;<br>
+					　　(五)在食用农产品生产、销售、贮存和运输过程中添加可能危害人体健康的物质;<br>
+						(六)法律、法规、规章规定的其他禁止行为。<br>
+						第五十条<br>
+						上市销售的肉类产品应当附有检疫合格证明;上市销售的其他食用农产品应当附有产地证明、检测合格证明。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont2">
+				<div class="rulesnum">第二十二条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">引导本市食用农产品批发交易市场、超市卖场、餐饮企业等食品经营企业与外埠进沪销售的食品和食用农产品生产经营企业实行食品安全信息对接，登记进沪食品和食用农产品相关信息。<br />
+						本市建立进口食品安全信息监管部门相互通报制度。出入境检验检疫、食品药品监督管理等部门应当督促进口商、经营企业公布临近保质期进口食品的相关信息。<br>
+						进沪食品、食用农产品信息登记、信息通报、信息公布等制度的具体办法，由市人民政府另行制定。
+					</div>
+				</div>
+			</div>
+			
+			<div class="conter hide contera cont3">
+				<div class="rulesnum">共两项条例</div>
+				<div class="closeDetail"></div>
+				<div id="wpr23" class="wprtxt">
+					<div class="contentxt2">第二十一条<br>
+						从事食品和食用农产品贮存、运输服务的经营者，应当依法向区市场监督管理部门备案。<br>
+						第三十四条<br>
+						提供食品和食用农产品贮存、运输服务的经营者，应当依法查验食品生产经营者的许可证件、营业执照或者身份证件、食品和食用农产品检验或者检疫合格证明等文件，留存其复印件，并做好食品和食用农产品进出库记录、运输记录。相关文件复印件和记录的保存期限不得少于产品保质期满后六个月;没有明确保质期的，保存期限不得少于二年;食用农产品相关文件复印件和记录的保存期限不得少于六个月。<br>
+						贮存、运输、陈列有特殊温度、湿度控制要求的食品和食用农产品，应当进行全程温度、湿度监控，并做好监控记录，符合保证食品和食用农产品安全所需的温度、湿度等特殊要求。监控记录保存期限不得少于二年。
+					</div>
+				</div>
+			</div>
+			
+			<div class="conter hide conterb cont4">
+				<div class="rulesnum">第三十条</div>
+				<div class="closeDetail"></div>
+				<div class="contentxt">食品生产经营者应当对回收食品进行登记，在显著标记区域内独立保存，并依法采取无害化处理、销毁等措施，防止其再次流入市场。</div>
+			</div>
+
+			<div class="conter hide contera cont5">
+				<div class="rulesnum">共两项条例</div>
+				<div class="closeDetail"></div>
+				<div id="wpr23" class="wprtxt">
+					<div class="contentxt2">第二十七条<br>
+						建立高风险食品生产经营企业主要原料和食品供应商检查评价制度。<br>
+						第二十八条<br>
+						取得食品生产许可的企业应当按照良好生产规范要求组织生产，实施危害分析与关键控制点体系，提高食品安全管理水平。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont6">
+				<div class="rulesnum">第三十五条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr6" class="wprtxt">
+					<div class="contentxt2">食用农产品批发交易市场、标准化菜市场等场所除履行法律、法规、规章规定的职责外，还应当合理划定功能区，加强基础设施建设，配备食品安全设施设备，保持场内环境卫生整洁，并遵守下列规定：<br />
+						(一)设立食品安全信息公示牌，配备专职食品安全管理员;<br />
+						(二)建立入场食品经营者档案，并查验入场经营食品相关证明材料;<br />
+						(三)指导并督促入场食品经营者建立食品经营记录;<br />
+						(四)与入场食品经营者签订食品安全协议;<br />
+						(五)按规定将相关信息上传至本市食品安全信息追溯平台。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont7">
+				<div class="rulesnum">第三十一条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr7" class="wprtxt">
+					<div class="contentxt2">食品生产经营者应当自行组织或者委托社会培训机构、行业协会，对本单位的从业人员进行上岗前和在岗期间的食品安全知识培训，学习食品安全法律、法规、规章、标准和食品安全知识，并建立培训档案。参加培训的人员可以按照规定，享受本市企业职工培训补贴。<br />
+						食品生产经营者应当对食品安全管理人员、关键环节操作人员及其他相关从业人员进行考核。考核不合格的，不得上岗。<br />
+						相关行业协会负责制定本行业食品生产经营者培训、考核标准，并提供相应的指导和服务。<br />
+						市食品药品监督管理、区市场监督管理部门应当对食品生产经营者的负责人、食品安全管理人员、关键环节操作人员及其他相关从业人员随机进行监督抽查考核并公布考核情况。监督抽查考核不得收取费用。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont8">
+				<div class="rulesnum">第五十一条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr8" class="wprtxt">
+					<div class="contentxt2">网络食品交易第三方平台提供者应当按照下列规定办理备案手续：<br />
+						(一)在本市注册登记的网络食品交易第三方平台提供者，应当在通信管理部门批准后三十个工作日内，向市食品药品监督管理部门备案，取得备案号;<br />
+						(二)在外省市注册登记的网络食品交易第三方平台提供者，应当自在本市提供网络食品交易第三方平台服务之日起三十个工作日内，将其在本市实际运营机构的地址、负责人、联系方式等相关信息向市食品药品监督管理部门备案。<br />
+						通过自建网站交易的食品生产经营者，应当在通信管理部门批准后三十个工作日内，向所在地的区市场监督管理部门备案，取得备案号。实行统一配送经营方式的食品经营企业，可以由企业总部统一办理备案手续。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont9">
+				<div class="rulesnum">第三十二条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr9" class="wprtxt">
+					<div class="contentxt2">食品生产经营者应当建立并执行从业人员健康管理制度。患有国务院卫生行政管理部门制定的相关规定中的疾病的人员，不得从事接触直接入口食品的工作。从事直接入口食品工作的食品从业人员应当每年进行健康检查，取得健康证明后方可上岗。<br />
+						食品生产经营者应当严格执行食品生产经营场所卫生规范制度，从业人员应当保持个人卫生、着装清洁。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont10">
+				<div class="rulesnum">第八十条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr9" class="wprtxt">
+					<div class="contentxt2">本市建立餐饮服务食品安全量化分级管理制度，评定结果应当向社会公布，并由餐饮服务提供者在经营场所显著位置公示。评定的具体办法由市食品药品监督管理部门制定。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide conterb cont11">
+				<div class="rulesnum">第三十八条</div>
+				<div class="closeDetail"></div>
+				<div class="contentxt">鼓励餐饮服务提供者采用电子显示屏、透明玻璃墙等方式，公开食品加工过程、食品原料及其来源信息。</div>
+			</div>
+
+			<div class="conter hide contera cont12">
+				<div class="rulesnum">第五十三条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr12" class="wprtxt">
+					<div class="contentxt2">网络食品交易第三方平台提供者应当建立食品安全管理制度，履行下列管理责任：<br />
+						(一)明确入网食品经营者的准入标准和食品安全责任;<br />
+						(二)对入网食品经营者进行实名登记;<br />
+						(三)通过与监管部门的许可信息进行比对、现场核查等方式，对入网食品经营者的许可证件进行审查;<br />
+						(四)对平台上的食品经营行为及信息进行检查，并公布检查结果;<br />
+						(五)公示入网食品经营者的食品安全信用状况;<br />
+						(六)及时制止入网食品经营者的食品安全违法行为，并向其所在地的区市场监督管理部门报告;<br />
+						(七)对平台上经营的食品进行抽样检验;<br />
+						(八)法律、法规、规章规定的其他管理责任。<br />
+						网络食品交易第三方平台提供者发现入网食品经营者存在未经许可从事食品经营、经营禁止生产经营的食品、发生食品安全事故等严重违法行为的，应当立即停止为其提供网络交易平台服务。<br />
+						仅为入网食品经营者提供信息发布服务的网络第三方平台提供者，应当履行本条第一款第一项至第三项规定的管理责任，并对平台上的食品经营信息进行检查，及时删除或者屏蔽入网食品经营者发布的违法信息。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont13">
+				<div class="rulesnum">第五十二条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr11" class="wprtxt">
+					<div class="contentxt2">网络食品经营者应当依法取得食品生产经营许可，并按照规定在自建交易网站或者网络食品交易第三方平台的首页显著位置或者经营活动主页面醒目位置，公示其营业执照、食品生产经营许可证件、从业人员健康证明、食品安全量化分级管理等信息。相关信息应当完整、真实、清晰，发生变化的，应当在十日内更新。</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont14">
+				<div class="rulesnum">第三十八条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr14" class="wprtxt">
+					<div class="contentxt2">餐饮服务提供者提供餐饮服务时应当符合下列要求：<br />
+						(一)经营场所符合公共场所卫生要求;<br />
+						(二)营业时段安排食品安全管理人员开展监督管理工作;<br />
+						(三)根据消费者的要求，提供公筷、公匙等公用餐具;不得向消费者提供不符合食品安全标准和要求的餐具、饮具;<br />
+						(四)法律、法规、规章规定的其他要求。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont15">
+				<div class="rulesnum">第五十四条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr15" class="wprtxt">
+					<div class="contentxt2">从事网络交易食品配送的网络食品经营者、网络食品交易第三方平台提供者、物流配送企业应当遵守有关法律、法规对贮存、运输食品以及餐具、饮具、容器和包装材料的要求，并加强对配送人员的培训和管理。从事网络订餐配送的，还应当遵守本条例第三十九条的规定。</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont16">
+				<div class="rulesnum">第三十九条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr16" class="wprtxt">
+					<div class="contentxt2">从事餐饮配送服务的，应当遵守下列要求：<br />
+						(一)送餐人员应当依法取得健康证明;<br />
+						(二)配送膳食的箱(包)应当专用，定期清洁、消毒;<br />
+						(三)符合保证食品安全所需的温度等特殊要求;<br />
+						(四)使用符合食品安全标准的餐具、饮具、容器和包装材料;<br />
+						(五)法律、法规、规章规定的其他要求。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont17">
+				<div class="rulesnum">第三十六条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr17" class="wprtxt">
+					<div class="contentxt2">食用农产品批发交易市场、大型超市卖场、中央厨房、集体用餐配送单位应当配备检验设备和检验人员或者委托有资质的食品检验机构，按照国家和本市有关规定，对入场销售或者采购的食品、食用农产品进行抽样检验；发现不符合食品安全标准的，应当立即采取控制措施，并向所在地的区市场监督管理部门报告。<br>
+						前款规定的抽样检验应当做好记录，记录的保存期限不得少于产品保质期满后六个月；没有明确保质期的，保存期限不得少于二年；食用农产品相关记录的保存期限不得少于六个月。<br>
+						鼓励标准化菜市场配备食品快速检验设备和检验人员，为消费者提供检验服务。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide conterb cont18">
+				<div class="rulesnum">第一百一十条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr18" class="wprtxt">
+					<div class="contentxt2 contentxtline">消费者因不符合食品安全标准的食品受到损害的，可以依法向生产经营者要求赔偿损失。接到消费者赔偿要求的生产经营者，应当依法实行首负责任制，先行赔付，不得推诿。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide conterb cont19">
+				<div class="rulesnum">第六十八条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr19" class="wprtxt">
+					<div class="contentxt2 contentxtline">鼓励食品生产经营者参加食品安全责任保险。<br />
+						高风险食品生产经营企业应当根据防范食品安全风险的需要，主动投保食品安全责任保险。</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont20">
+				<div class="rulesnum">第四十五条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr20" class="wprtxt">
+					<div class="contentxt2">本市对餐厨废弃油脂实行符合产业发展导向的资源化利用，推进实行餐厨废弃油脂收运、处置的一体化经营模式。<br />
+						产生餐厨废弃油脂和餐厨垃圾的食品生产经营者以及从事餐厨废弃油脂和餐厨垃圾收运和处置活动的单位应当按照国家和本市有关法律、法规、规章的规定，收集、处置餐厨废弃油脂和餐厨垃圾。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide conterb cont21">
+				<div class="rulesnum">第八十一条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr21" class="wprtxt">
+					<div class="contentxt2">本市建立食品安全信息追溯制度。根据食品安全风险状况，对重点监督管理的食品和食用农产品实施信息追溯管理。具体办法由市人民政府另行制定。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont22">
+				<div class="rulesnum">第一百零九条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">本市建立食品安全严重违法生产经营者与相关责任人员重点监管名单制度。对因严重违反食品安全法律、法规、规章，受到行政处罚或者刑事处罚的食品生产经营者及其法定代表人、责任人员的有关信息，以及依法采取的相关限制措施和重点监控措施，向社会公布。具体办法由市食品药品监督管理部门制定。<br />
+						对被吊销许可证、准许生产证或者注销临时备案、登记的食品生产经营者及其法定代表人、直接负责的主管人员和其他直接责任人员，自处罚决定作出之日起五年内不得申请食品生产经营许可、食品生产加工小作坊准许生产证、小型餐饮服务提供者临时备案、食品摊贩登记，或者从事食品生产经营管理工作、担任食品生产经营企业食品安全管理人员。<br />
+						因食品安全犯罪被判处有期徒刑以上刑罚的，终身不得从事食品生产经营管理工作，也不得担任食品生产经营企业食品安全管理人员。<br />
+						食品生产经营者聘用人员违反前两款规定的，由市食品药品监督管理部门或者区市场监督管理部门吊销许可证。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont23">
+				<div class="rulesnum">共两项条例</div>
+				<div class="closeDetail"></div>
+				<div id="wpr23" class="wprtxt">
+					<div class="contentxt2">第六条<br />
+						市、区人民政府设立食品药品安全委员会，在食品安全方面承担下列职责：<br>
+						（一）研究部署、统筹指导食品安全工作；<br>
+						（二）制定食品安全中长期规划和年度工作计划；<br>
+						（三）组织开展食品安全重大问题的调查研究，制定食品安全监督管理的政策措施；<br>
+						（四）督促落实食品安全监督管理责任，组织开展食品安全监督管理工作的督查考评；<br>
+						（五）组织开展重大食品安全事故的责任调查处理工作；<br>
+						（六）研究、协调、决定有关部门监督管理职责问题；<br>
+						（七）市、区人民政府授予的其他职责。<br>
+						第七条<br>
+						市食品药品监督管理部门负责对本市食品、食品添加剂生产经营活动实施监督管理;对食品安全事故的应急处置和调查处理进行组织指导。根据市食品药品安全委员会的要求，对突发食品安全事件处置中监管职责存在争议、尚未明确的事项，先行承担监管职责。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont24">
+				<div class="rulesnum">第四十七条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">在本市从事畜禽、畜禽产品生产经营活动的，应当遵守国家和本市有关法律、法规、规章的规定。<br />
+						外省市的畜禽、畜禽产品应当通过市人民政府指定的道口，取得道口检查签章后，方可进入本市。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont25">
+				<div class="rulesnum">第二十二条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">引导本市食用农产品批发交易市场、超市卖场、餐饮企业等食品经营企业与外埠进沪销售的食品和食用农产品生产经营企业实行食品安全信息对接，登记进沪食品和食用农产品相关信息。<br />
+						本市建立进口食品安全信息监管部门相互通报制度。出入境检验检疫、食品药品监督管理等部门应当督促进口商、经营企业公布临近保质期进口食品的相关信息。<br>
+						进沪食品、食用农产品信息登记、信息通报、信息公布等制度的具体办法，由市人民政府另行制定。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont26">
+				<div class="rulesnum">第四十三条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">区和乡、镇人民政府或者街道办事处应当按照方便群众、合理布局的原则，完善区域商业规划，加强住宅区、商务区、工业区等的餐饮服务配套建设，引导小型餐饮服务提供者改善经营条件，提高管理水平。<br />
+						小型餐饮服务提供者从事食品经营活动，应当依法取得食品经营许可，并遵守食品安全法律、法规、规章和标准的要求。<br />
+						未取得食品经营许可，但经营食品符合食品安全卫生要求、不影响周边居民正常生活的小型餐饮服务提供者，应当向所在地的乡、镇人民政府或者街道办事处办理临时备案。小型餐饮服务提供者办理临时备案的具体要求、标准及相应的退出机制，由市人民政府另行制定。<br />
+						乡、镇人民政府或者街道办事处应当将备案信息通报所在地的区市场监督管理、环境保护、房屋管理、消防安全、城市管理行政执法等部门，相关部门应当按照各自职责加强对小型餐饮服务提供者的日常监管。
+					</div>
+				</div>
+			</div>
+
+			<div class="conter hide contera cont27">
+				<div class="rulesnum">第二十九条</div>
+				<div class="closeDetail"></div>
+				<div id="wpr22" class="wprtxt">
+					<div class="contentxt2">食品生产经营者应当建立临近保质期食品和食品添加剂管理制度，将临近保质期的食品和食品添加剂集中存放、陈列、出售，并作出醒目提示。<br />
+						禁止食品生产经营者将超过保质期的食品和食品添加剂退回相关生产经营企业。食品生产经营者应当采取染色、毁形等措施对超过保质期的食品和食品添加剂予以销毁，或者进行无害化处理，并记录处置结果。记录保存期限不得少于二年。
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- display object -->
+	<audio id="bgsound" preload="auto" loop src="images/bg.mp3"></audio>
+
+	<div class="p1 hide">
+		<div class="p1_1"><img src="images/p1_1.png"></div>
+		<div class="p1_2"><img src="images/p1_2.png"></div>
+		<div class="p1_3"><img src="images/p1_3.png"></div>
+		<div class="p1_4"><img src="images/p1_4.png"></div>
+		<div class="p1_5"><img src="images/p1_5.png"></div>
+		<div class="p1_6"><img src="images/p1_6.png"></div>
+	</div>
+
+	<div class="share hide"><img src="images/share.png" /></div>
+
+	<div class="landscape_tip hide">
+		<div class="landtip">
+			<div class="land_1"></div>
+			<div class="land_2"></div>
+		</div>
+	</div>
+
+	<div class="hide">
+		<script src="https://s4.cnzz.com/z_stat.php?id=1261471580&web_id=1261471580" language="JavaScript"></script>
+	</div>
+	<script src="js/libs/weixin.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

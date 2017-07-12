@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>结果展示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<table>
+	<tr>
+		<td>总共参与人次:</td>
+		<td id="sum"></td>
+	</tr>
+	<tr>
+		<td>正确率:</td>
+		<td id="courrent"></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	$.ajax({
+		url: 'http://mp.sfsctech.com/wx/QA1Controller.do?getResult',
+		dataType: 'json',
+		type: 'post',
+		success: function(data) {
+			console.log(data);
+			if (data.success) {
+				var rightList = data.attrs.rightList;
+				var sumList = data.attrs.sumList;
+				$("#sum").text(sumList);
+				
+				$("#courrent").text(percentNum(rightList, sumList));
+			} else {
+				alert("网络异常，请稍后重试");
+			}
+			
+		}
+
+	});
+	function percentNum(num, num2) { 
+		return (Math.round(num / num2 * 10000) / 100.00 + "%"); //小数点后两位百分比
+	}
+</script>
+</body>
+</html>

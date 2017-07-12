@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>“食品安全之旅” 全景图</title>
+	<link type="text/css" href="css/main.css" rel="stylesheet">
+	<script src="js/libs/jquery-2.1.1.min.js"></script>
+	<script>
+		if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				var phoneScale = parseInt(window.screen.width)/640;
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		}else{
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+</head>
+<base>
+<body class="questions">
+	<figure><img src="images/cay3.png"></figure>
+	<div class="answerRight">
+		<img src="images/succeed.png">
+		<p><big>恭喜您！</big></p>
+		<p>您是第<strong></strong>位回答正确者！</p>
+		<!--<p>总共参与人次：<strong id="sum"></strong></p>
+		<p>正确率：<strong id="courrent"></strong></p>-->
+		<p><button type="button" onclick="location.href='../index.html';"></button></p>
+	</div>
+	<script>
+		$(function(){
+			$("strong").text(window.location.href.split("?")[1].split("=")[1]);
+//			$.ajax({
+//				url: 'http://webservicedev.efesco.com/sfsctechWechat/QA1Controller.do?getResult',
+//				dataType: 'json',
+//				type: 'post',
+//				success: function(data) {
+//					if (data.success) {
+//						var rightList = data.attrs.rightList;
+//						var sumList = data.attrs.sumList;
+//						$("#sum").text(sumList);
+//						$("#courrent").text(percentNum(rightList, sumList));
+//					} else {
+//						alert("网络异常，请稍后重试");
+//					}
+//					
+//				}
+//		
+//			});
+		});
+//		function percentNum(num, num2) { 
+//			return (Math.round(num / num2 * 10000) / 100.00 + "%"); //小数点后两位百分比
+//		}
+	</script>
+</body>
+</html>
