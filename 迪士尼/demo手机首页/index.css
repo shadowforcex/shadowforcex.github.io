@@ -1,0 +1,369 @@
+html,body{
+    height:100%;
+
+}
+
+
+
+.blank1{
+    height:3%;
+}
+
+.blank2{
+    height:2%;
+}
+.bodyPartStyle{
+    height: 32%;
+    width:96%;
+    margin: 0 auto;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mainContainer{
+    height:80%;
+    background: url("../img/bg1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.titlePanel{
+    position: relative;
+    height:26%;
+    background-color: rgba(0,0,0,0.2);
+    width:96%;
+    margin: 0 auto;
+    border-radius: 3px;
+    color:#fff;
+    padding:1rem;
+    z-index:101;
+
+}
+.datePart{
+    position: absolute;
+    width: 10rem;
+    height:4.5rem;
+    top:50%;
+    margin-top: -2.25rem;
+}
+
+.date{
+    font-size: 2rem;
+    height:3rem;
+}
+.dateSmall{
+    font-size: 0.875rem;
+    height: 1.5rem;
+}
+.footerPart{
+    height:20%;
+    position: relative;
+
+}
+.weather{
+
+    position: absolute;
+    width:4rem;
+    height:5rem;
+    top:50%;
+    margin-top: -2.5rem;
+    right: 1rem;
+
+}
+.weather img{
+    width: 100%;
+}
+.bpTile{
+    height:2rem;
+    line-height: 2rem;
+    font-size: 0.875rem;
+    color:#fff;
+    background-color: #fca311;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    font-weight: 600;
+
+}
+
+
+.bpContainer{
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+    height:3rem;
+    color:#fff;
+
+    overflow: auto;
+
+}
+
+.bpcInner{
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    padding:0.5rem;
+}
+
+
+.fbtnLine2{
+    padding:0.5rem 0;
+    border-top:1px solid #efefef
+}
+.fbtnLine2>div {
+    width: 16.666666666667%;
+    border-right: 1px solid #efefef;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+.fbtnLine2 img {
+    width: 50%;
+}
+.fbl2BtnText{
+    font-size: 12px;
+    color:#6b6b6b;
+
+}
+.fbtnLine1,.fbtnLine2{
+    height:50%;
+    position: relative;
+}
+
+.fbl1Style{
+    width: 50%;
+
+    background-color: #fca311;
+    color:#fff;
+    border-top:3px solid #fff;
+    border-bottom:3px solid #fff;
+    padding:0 1rem;
+    font-size: 12px;
+}
+
+.fblNoBorder{
+    border: none !important;
+}
+.fbl1Btn1{
+
+    text-align: left;
+}
+
+.fbl1Btn2{
+
+    text-align: right;
+}
+
+.largeBtnPart1{
+    position: absolute;
+    width:11rem;
+    left:50%;
+    margin-left: -5.5rem;
+    bottom:0;
+    z-index:101;
+}
+.largeBtnPart2{
+    position: absolute;
+    top:-1px;
+    width: 7.3591549295775rem !important;
+    left:50%;
+    margin-left:-3.6795774647887rem;
+    padding:0 !important;
+    border: none!important;
+    z-index:101;
+
+}
+.largeBtn>img{
+    width: 100%;
+    display: block;
+}
+
+.mask{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:100;
+}
+.mMenuPart{
+    position:relative;
+    height:65.2%;
+    width:96%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+.mMenuList {
+    position: absolute;
+    min-height: 15rem;
+    width: 100%;
+    height: 60%;
+    padding:2rem 1rem 2rem 1rem;
+    z-index: 101;
+}
+
+.left100 {
+    left: 100%;
+}
+
+.menuTitle{
+    height:2rem;
+    line-height: 2rem;
+    font-size: 0.875rem;
+    color:#fff;
+    background-color: #fca311;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    font-weight: 600;
+}
+
+.mItem{
+    width:30%;
+
+    float: left;
+    margin: 0 auto 2rem;
+    margin-right:4.9%;
+}
+
+.mItemImg{
+    overflow: hidden;
+    border-radius: 100%;
+
+    vertical-align: middle;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.mItemImg> img{
+    display: block;
+    width:100%;
+
+    margin: 0 auto;
+}
+
+.mName {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mItem:nth-child(3n){
+    margin-right: 0;
+}
+.mMenuList:before,
+.mMenuList:after {
+    content: "";
+    display: table;
+}
+.mMenuList:after {
+    clear: both;
+}
+.mMenuList {
+    *zoom: 1;
+}
+
+
+.mMenuFooter{
+    position: relative;
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width:2.4rem;
+    margin: 1rem auto;
+}
+.mMenuClickBtn{
+    width:0.5rem;
+    height:0.5rem;
+    border:1px solid #fa9c08;
+    border-radius:1rem ;
+    margin-left: 1rem;
+
+}
+.mMenuSelected{
+    background-color: #fa9c08;;
+}
+
+.mMenuBg{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+
+}
+
+.mMenuPart{
+    -webkit-transition:all 1s;
+    transition: all 1s;
+    -webkit-transform:rotate(90deg);
+            transform:rotate(90deg);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+
+    -webkit-animation:mymove2 0.5s;
+
+            animation:mymove2 0.5s;
+
+    -webkit-animation-fill-mode: forwards;
+
+            animation-fill-mode: forwards;
+}
+
+.maskOn .mMenuPart{
+
+    -webkit-transform:rotate(0deg);
+
+            transform:rotate(0deg);
+    -webkit-transition:all 1s;
+    transition: all 1s;
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom
+}
+
+.maskOn .mMenuPart
+{
+    -webkit-animation:mymove 0.5s;
+            animation:mymove 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+}
+
+
+@-webkit-keyframes mymove
+{
+    from {    -webkit-transform:rotate(90deg);    transform:rotate(90deg);}
+    to {    -webkit-transform:rotate(0deg);    transform:rotate(0deg);}
+}
+
+
+@keyframes mymove
+{
+    from {    -webkit-transform:rotate(90deg);    transform:rotate(90deg);}
+    to {    -webkit-transform:rotate(0deg);    transform:rotate(0deg);}
+}
+
+
+.fbl1Btn1.cbutton::after{
+    margin-left: -80px;
+}
+
+.fbl1Btn2.cbutton::after{
+    margin-left: 0px;
+}
+
+
+@-webkit-keyframes mymove2{
+    from {     -webkit-transform:rotate(0deg);     transform:rotate(0deg);}
+    to {   -webkit-transform:rotate(90deg);   transform:rotate(90deg);}
+}
+
