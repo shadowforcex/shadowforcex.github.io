@@ -1,0 +1,71 @@
+
+
+body{
+ background-color: #e6e6e6;
+}
+.title{
+    background-color: #ffcdcc;
+    height:4rem;
+    line-height: 4rem;
+    color:#900d08;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.eventLine{
+    position: relative;
+    margin-top:1rem;
+    background-color: #fff;
+    padding:1rem 2rem;
+    height:7.5rem;
+}
+.eventName{
+
+    height:3rem;
+    line-height: 3rem;
+    color:#666;
+    font-size:1.2rem;
+    width: 95%;
+}
+.eventDate{
+    height:3rem;
+    line-height: 3rem;
+    color:#900d08;
+    font-size:1rem;
+}
+.eventEnter{
+    position: absolute;
+    right:4rem;
+    bottom:1.3rem;
+    width:4rem;
+    height:1.5rem;
+    line-height: 1.5rem;
+    background-color: #ffcdcc;
+    color:#900d08;
+    text-align: center;
+
+}
+
+.arrowRight{
+    display: block;
+    position: absolute;
+    right:1.2rem;
+    top:2.8rem;
+    width: 0.7rem;
+}
+
+.redLine{
+    position: absolute;
+    left:0;
+    top:1rem;
+    height:3rem;
+    width:0.5rem;
+    background-color:#900d08;
+    z-index: 100;
+}
+
+.headPart{
+    width:100%;
+    display: block;
+}
+

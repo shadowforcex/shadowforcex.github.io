@@ -1,0 +1,378 @@
+.arrowStyle{
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.2rem;
+    margin-left: 1rem;
+
+}
+.headPart{
+    height:3rem;
+    line-height: 3rem;
+}
+.detail{
+    width: 20%;
+    color:#fff;
+}
+.name{
+    width:80%;
+    text-align: center;
+    color:#fff;
+    overflow: hidden;
+    text-indent: 20%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:#666;
+}
+html{
+    font-family: "microsoft yahei";
+    height:100%;
+    background-color:#3c0200 ;
+}
+body{
+    height: 100%;
+    overflow: hidden;
+}
+.calendarContainer{
+    height:80%;
+
+}
+
+.tableOutter{
+    height:85%;
+    overflow: auto;
+}
+.displayFlex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.hidden{
+    display: none!important;
+}
+
+
+.calendar{
+    width: 100%;
+    /*border-collapse: collapse;*/
+    table-layout:fixed
+}
+
+.dayStyle{
+    position: relative;
+    width:14.285%;
+    /*border:1px solid #efefef;*/
+    height: 3rem;
+    white-space: normal;
+    word-break: break-all;
+    text-align: center;
+    padding:0.5rem 0;
+    vertical-align: top;
+    max-height:10rem;
+    /*line-height: 2rem;*/
+    vertical-align: middle;
+    background-color: #919191;
+    border-radius: 0.5rem;
+
+}
+
+.dayStyle span{
+   /* line-height: 2rem;*/
+    color:#fff !important;
+}
+.title{
+    height:3rem;
+    position: relative;
+    overflow: hidden;
+    background-color: #a10904;
+
+}
+.btnLine{
+    width: 100%;
+
+    margin: 1rem auto 0;
+}
+.btnStyle{
+    width: 20%;
+    text-align: center;
+
+}
+.btnStyle>img{
+    width:0.8rem;
+}
+
+.tempDate{
+    width: 60%;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.3rem;
+    color:#fff;
+}
+.change{
+    position: absolute;
+    right:0.5rem;
+    top:1rem;
+    width:5rem;
+    font-size: 0.8rem;
+    height: 1.3rem;
+    color: #ffaa00;
+    text-align: right;
+}
+
+.sun,.sat{
+    color: #ffaa00;
+}
+.sun span,.sat span{
+    color: #ffaa00;
+}
+/*.dayStyle .eventItem:first-child{*/
+/*margin-top: 3rem;*/
+/*}*/
+
+.eventItem{
+    background-color: #ff8082;
+    border:1px solid #666;
+    min-height:1rem;
+    width: 100%;
+    font-size: 8px;
+    margin-top: 2px;
+    line-height: 1rem;
+    padding:0.1rem;
+}
+.eventLine{
+    min-height:3rem;
+    line-height: 2.5rem;
+    border:1px solid #bcbcbc;
+    background-color: #efefef;
+    padding:0 1rem
+}
+.panel{
+    overflow: hidden;
+    /*transition: all;*/
+    /*animation:heightChange 1s ;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+.remarkNum{
+    position: absolute;
+    right: 2px;
+    top: 1px;
+    font-size: 8px;
+    color:#ff8082;
+
+}
+/*@keyframes heightChange*/
+/*{*/
+/*from {height: 0; }*/
+/*to {height: auto;}*/
+/*}*/
+
+/*----*/
+
+.titleT{
+    position: relative;
+    background-color: #56a8fe;
+    height:10%;
+    color:#fff;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+
+}
+.back {
+    position: absolute;
+    top:50%;
+    margin-top: -1rem;
+    left:0.5rem;
+    width: 2rem;
+}
+.back>img{
+    width: 100%;
+    height: auto;
+}
+.titleText{
+    position: absolute;
+    width: 10rem;
+    height:2rem;
+    line-height: 2rem;
+    top:50%;
+    margin-top:-1rem ;
+    left:50%;
+    margin-left: -5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+
+}
+.titleSelect{
+    position: absolute;
+    width: 6rem;
+    height:2rem;
+    line-height: 2rem;
+    top:50%;
+    margin-top:-1rem ;
+    right:0;
+    margin-left: -5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+
+
+.bottomLine{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 10%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.bottomBtn{
+    height: 2rem;
+    line-height: 1.8rem;
+    margin-top: 5%;
+    border-radius: 1rem;
+
+    text-align: center;
+    border: 1px solid #efefef;
+}
+.weekBtn{
+    width:20%;
+    background-color: #56a8fe;
+    color: #fff;
+}
+
+.addBtn{
+    width:30%;
+    height: 80%;
+    background: url("../img/addbtn.png") center no-repeat;
+    background-size: 3rem auto;
+}
+.monthBtn{
+    width:15%;
+;
+    color: #56a8fe;
+
+}
+
+.bodyPart{
+    padding:0.5rem 1.5rem 1rem;
+    background-color: #fff;
+}
+
+
+.weekTitle th{
+    border:none;
+    color:#a10904  !important   ;
+    background-color: #fff;
+}
+.setSize{
+    width:1rem;
+    height:1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.2rem;
+}
+
+.forSelect{
+    background-color: #fccdce;
+    color:#a20704;
+}
+
+.onSelect{
+    background-color: #a20704;
+    color:#fff;
+}
+
+.unabled{
+    background-color: #d9d9d9;
+    color:#fff;
+}
+.tipLine{
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+
+.setSizeOutter{
+    height:2rem;
+    line-height: 2rem;
+
+}
+
+.detailPart{
+    color:#fff;
+    padding:1rem;
+}
+
+.timePart{
+    background-color:#995b59;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height:3rem;
+    margin-top: 1rem;
+    padding:0 1rem;
+    -webkit-appearance: none;
+}
+
+
+.timeSelectPart{
+    background: #995b59;
+    color:#fff;
+    border: none;
+    display: block;
+    width:10rem;
+    outline: none;
+    font-size: 1.1rem;
+}
+.timeSelectPart option{
+    color:#fff;
+    outline: none;
+}
+.topPart{
+    height:90%;
+    overflow: auto;
+}
+
+.timeText{
+    line-height: 3rem;
+    font-size: 1.1rem;
+    color:#cca8a8;
+}
+
+.bottomPart{
+    background-color: #fff;
+    height: 10%;
+}
+
+.moneyPart{
+    color:#666;
+    width:60%;
+    height:100%;
+    padding:0 2rem;
+    font-size: 1.1rem;
+}
+
+.moneyPart span{
+    color:#a20704;
+}
+
+.submitBtn{
+    width:40%;
+    color:#fff;
+    background-color: #f39800;
+    text-align: center;
+    font-size: 1.1rem;
+}

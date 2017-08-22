@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <link rel="stylesheet" href="../mainCss/mainCss.css">
+    <link rel="stylesheet" href="detail.css">
+    <script src="../jslib/jquery-1.11.3.min.js"></script>
+    <script src="detail.js"></script>
+</head>
+<body>
+<div class="topPart">
+    <div class="headPart displayFlex">
+        <div class="name">xxxx活动</div>
+        <div class="detail">详情<img class="arrowStyle" src="../img/arrow4.png"></div>
+    </div>
+    <div class="detailPart hidden">
+        xxxxx
+    </div>
+    <div class="title">
+        <div class="btnLine displayFlex">
+            <div class="preBtn btnStyle"><img src="../img/arrowL.png"></div>
+            <div class="tempDate">2017.1</div>
+            <div class="nextBtn btnStyle"><img src="../img/arrowR.png"></div>
+        </div>
+
+    </div>
+    <div class="bodyPart">
+
+        <div class="calendarContainer">
+
+            <div class="remarkNum remarkNumTempLate hidden"></div>
+
+            <div class="eventLine eventLineTemplate hidden"></div>
+
+            <div class="eventItem eventItemTemplate hidden"></div>
+
+            <div class="tableOutter">
+                <table class="calendar" cellspacing="5">
+                    <tr class="trTemplate panel hidden">
+                        <td class="eventOutter" colspan="7">
+                        </td>
+                    </tr>
+                    <tr class="weekTitle">
+                        <th class="sun dayStyle">日</th>
+                        <th class="mon dayStyle">一</th>
+                        <th class="tue dayStyle">二</th>
+                        <th class="wed dayStyle">三</th>
+                        <th class="thu dayStyle">四</th>
+                        <th class="fri dayStyle">五</th>
+                        <th class="sat dayStyle">六</th>
+                    </tr>
+                    <tr class="weekStyle week1">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+                    <tr class="week2 weekStyle">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+
+                    <tr class="week3 weekStyle">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+                    <tr class="week4 weekStyle">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+
+                    <tr class="week5 weekStyle">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+                    <tr class="week6 weekStyle hidden">
+                        <td class="sun dayStyle"><span></span></td>
+                        <td class="mon dayStyle"><span></span></td>
+                        <td class="tue dayStyle"><span></span></td>
+                        <td class="wed dayStyle"><span></span></td>
+                        <td class="thu dayStyle"><span></span></td>
+                        <td class="fri dayStyle"><span></span></td>
+                        <td class="sat dayStyle"><span></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tipLine displayFlex">
+
+            <div class="setSizeOutter displayFlex">
+                <div class="setSize " style="background-color: #fecdcc"></div>
+                可选
+            </div>
+            <div class="setSizeOutter displayFlex">
+                <div class="setSize " style="background-color: #a20704"></div>
+                已选
+            </div>
+            <div class="setSizeOutter displayFlex">
+                <div class="setSize " style="background-color: #d9d9d9"></div>
+                订完
+            </div>
+            <div class="setSizeOutter displayFlex">
+                <div class="setSize " style="background-color: #919191"></div>
+                不可订
+            </div>
+
+        </div>
+    </div>
+    <div class="timePart displayFlex">
+        <div class="timeText">选择参加时间:</div>
+        <select class="timeSelectPart">
+            <option>9：15-10：15</option>
+            <option>13：15-15：15</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="bottomPart displayFlex">
+    <div class="moneyPart">费用：<span>0.00</span>元</div>
+    <div class="submitBtn">提交</div>
+</div>
+</body>
+</html>

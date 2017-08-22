@@ -1,0 +1,89 @@
+html{
+    background-color: #3c0200;
+}
+
+
+.btn{
+    background-color: #f39801;
+    color:#fff;
+    text-align: center;
+    width:80%;
+    margin: 4rem auto;
+    height:3rem;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+    text-indent: 1rem;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+}
+
+.headPart{
+    width:100%;
+    display: block;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#808080;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    　　color:#808080;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    　　color:#808080;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    　　color:#808080;
+}
+
+
+.icon{
+    width:2rem;
+    height:2rem;
+    vertical-align: middle;
+}
+
+input{
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid #bfbfbf;
+    height:3rem;
+    line-height: 3rem;
+    outline: none;
+    color:#808080;
+    font-size: 1.2rem;
+    width: 16rem;
+}
+
+
+
+.lineStyle{
+    width:20rem;
+    margin: 1rem auto;
+}
+
+.lineStyle input{
+    margin-left:1rem;
+}
+
+.textTitle{
+    text-align: center;
+    font-size: 3rem;
+    height: 4rem;
+    line-height: 4rem;
+    color:#fff;
+    margin:1rem 0 2rem;
+}
+
+input::-webkit-input-placeholder{
+    color:#cca8a8;
+}
+
+.bottomText{
+    color: #cca8a8;
+    text-align: center;
+    position: absolute;
+    bottom:0.5rem;
+    width: 100%;
+
+}
+
