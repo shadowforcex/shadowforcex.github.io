@@ -101,7 +101,9 @@
 
                 with(ctx) {
                     if(count>300){
-                        window.location.href="fin.html"
+                        ctx.clearRect(0, 0 ,w,h);
+                        setTimeout(function(){  window.location.href="fin.html"; }, 3000);
+
                     }
                     beginPath()
 //                 ctx.clearRect(x, y ,Math.PI * 20,Math.PI * 20);
