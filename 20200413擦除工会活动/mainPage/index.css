@@ -57,7 +57,7 @@ ol li{
     margin-top:2rem!important;
 }
 .refresh-animation {
-
+    animation: rotate 15s linear infinite;
     -webkit-animation: rotate 15s linear infinite; /*Safari and Chrome*/
 }
 @keyframes rotate {
@@ -77,9 +77,15 @@ ol li{
 
 @-webkit-keyframes rotate {
     0%{
-        -moz-transform:rotate(0deg);
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);   /* IE 9 */
+        -moz-transform:rotate(0deg);  /* Firefox */
+        -o-transform:rotate(0deg);
     }
     100%{
-        -moz-transform:rotate(360deg);
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -o-transform:rotate(360deg);
     }
 }
