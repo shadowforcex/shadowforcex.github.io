@@ -66,12 +66,14 @@ ol li{
         -ms-transform:rotate(0deg);     /* IE 9 */
         -moz-transform:rotate(0deg);    /* Firefox */
         -o-transform:rotate(0deg);
+        -webkit-transform: rotate(0deg);;
     }
     100% {
         transform:rotate(360deg);
         -ms-transform:rotate(360deg);   /* IE 9 */
         -moz-transform:rotate(360deg);  /* Firefox */
         -o-transform:rotate(360deg);
+        -webkit-transform: rotate(360deg);;
     }
 }
 
@@ -81,11 +83,13 @@ ol li{
         -ms-transform:rotate(0deg);   /* IE 9 */
         -moz-transform:rotate(0deg);  /* Firefox */
         -o-transform:rotate(0deg);
+        -webkit-transform: rotate(0deg);;
     }
     100%{
         transform:rotate(360deg);
         -ms-transform:rotate(360deg);   /* IE 9 */
         -moz-transform:rotate(360deg);  /* Firefox */
         -o-transform:rotate(360deg);
+        -webkit-transform: rotate(360deg);;
     }
 }
