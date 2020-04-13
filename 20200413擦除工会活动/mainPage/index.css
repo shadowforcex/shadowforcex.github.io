@@ -1,0 +1,85 @@
+body{
+    background:#ff7c00 ;
+    color:#fff;
+}
+
+.topPart{
+    height:23rem;
+    background-color:#ffbe00    ;
+    padding-top:2rem;
+}
+
+.bottomPart{
+    background-image: linear-gradient(#ffbe00,#ff7c00);
+}
+
+.container{
+    position: relative;
+    width:20rem;
+    height:20rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.symbol{
+    position: absolute;
+    width:12rem;
+    height: 12rem;
+    top:3.75rem;
+    left:4rem;
+}
+.outLight{
+    width: 20rem;
+    height: 20rem;
+}
+.outLight{
+    background: url("../img/light.jpg");
+    background-size: 100% 100%;
+}
+
+
+.title{
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+}
+.ruleStyle{
+    width:15.5rem;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+div.ruleStyle{
+    margin-top:3rem;font-size: 1.125rem
+}
+
+ol li{
+    margin-top:2rem!important;
+}
+.refresh-animation {
+
+    -webkit-animation: rotate 15s linear infinite; /*Safari and Chrome*/
+}
+@keyframes rotate {
+    0%{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);     /* IE 9 */
+        -moz-transform:rotate(0deg);    /* Firefox */
+        -o-transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -o-transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0%{
+        -moz-transform:rotate(0deg);
+    }
+    100%{
+        -moz-transform:rotate(360deg);
+    }
+}

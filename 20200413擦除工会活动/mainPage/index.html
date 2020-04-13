@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>擦亮“工”字牌  开启新家园 </title>
+    <link rel="stylesheet" href="../mainCss/mainCss.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="../jslib/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+<img id="img" src="../img/white.png" style="display: none">
+    <div class="topPart">
+        <div class="container">
+            <div class="outLight refresh-animation"></div>
+            <canvas class="symbol"></canvas>
+        </div>
+    </div>
+    <div class="bottomPart">
+        <div class="title">擦亮“工”字牌  开启新家园 </div>
+        <div class="ruleStyle" style="">活动规则</div>
+        <ol>
+            <li  class="ruleStyle">
+                请用手指在上方工会徽章擦拭，共
+                同开启新家园，即可参与活动；
+            </li>
+            <li  class="ruleStyle">
+                我们将随机抽取幸运用户，送出
+                由上海外服雇员工会提供的“防疫
+                爱心礼包”一份。
+            </li>
+        </ol>
+
+
+    </div>
+
+<script type="text/javascript">
+    var count=0;
+    var bodyStyle = document.body.style;
+
+    bodyStyle.mozUserSelect = 'none';
+    bodyStyle.webkitUserSelect = 'none';
+
+    var img = new Image();
+    var canvas = document.querySelector('canvas');
+    canvas.style.backgroundColor='transparent';
+    canvas.style.position = 'absolute';
+    var imgs = ['../img/red.png','../img/white.png'];
+    //var imgs = ['p_0.jpg','p_1.jpg'];
+    //var num = Math.floor(Math.random()*2);
+    //
+    //img.src = imgs[num];
+    img.src = imgs[0];
+    img.addEventListener('load', function(e) {
+        var ctx;
+
+
+        console.log(window.getComputedStyle($("html")[0]).fontSize)
+        var fontSize=Number((window.getComputedStyle($("html")[0]).fontSize.replace("px"," ")));
+        console.log(fontSize)
+        var w = 12*fontSize,
+             h = 12*fontSize;
+        var offsetX = canvas.offsetLeft,
+                offsetY = canvas.offsetTop;
+        var mousedown = false;
+
+        function layer(ctx) {
+//        ctx.fillStyle = 'gray';
+//        ctx.fillRect(0, 0, w, h);
+            var img=document.getElementById("img");
+            ctx.drawImage(img,0,0, w,h);
+        }
+
+        function eventDown(e){
+            e.preventDefault();
+            mousedown=true;
+        }
+
+        function eventUp(e){
+            e.preventDefault();
+            mousedown=false;
+        }
+
+        function eventMove(e){
+            e.preventDefault();
+            if(mousedown) {
+                if(e.changedTouches){
+                    e=e.changedTouches[e.changedTouches.length-1];
+
+                }
+
+                var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,
+                        y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;
+//                var tempx= window.innerWidth-$(".symbol").width();
+//                console.log(  e.clientX)
+//                var x= e.clientX/$(".symbol").width()* window.innerWidth;
+//                var y= (e.clientY-100)/$(".symbol").height()* window.innerHeight;
+
+
+                with(ctx) {
+                    if(count>250){
+                        window.location.href="fin.html"
+                    }
+                    beginPath()
+//                 ctx.clearRect(x, y ,Math.PI * 20,Math.PI * 20);
+                    ctx.clearRect(x-40, y-40 ,20,20);
+//                 arc(x, y, 40, 0, Math.PI * 2);
+//                 fill();
+                    count++;
+
+                }
+            }
+        }
+
+        canvas.width=w;
+        canvas.height=h;
+        canvas.style.backgroundImage='url('+img.src+')';
+        canvas.style.backgroundSize="12rem 12rem";
+        ctx=canvas.getContext('2d');
+        ctx.fillStyle='transparent';
+        ctx.fillRect(0, 0, w, h);
+        layer(ctx);
+
+        ctx.globalCompositeOperation = 'destination-out';
+
+        canvas.addEventListener('touchstart', eventDown);
+        canvas.addEventListener('touchend', eventUp);
+        canvas.addEventListener('touchmove', eventMove);
+        canvas.addEventListener('mousedown', eventDown);
+        canvas.addEventListener('mouseup', eventUp);
+        canvas.addEventListener('mousemove', eventMove);
+    });
+</script>
+</body>
+
+</html>

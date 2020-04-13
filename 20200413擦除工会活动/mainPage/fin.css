@@ -1,0 +1,35 @@
+body{
+    background-image: linear-gradient(#ffbe00,#ff7c00);
+    color:#fff;
+}
+.outter{
+    width:22rem;
+    height:18.48rem;
+    background: url("../img/thx.png");
+    background-size: 100% 100%;
+    margin: 2rem auto;
+    padding-top: 5rem;
+}
+
+.headIcon{
+    display: block;
+    width:5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    margin: 0 auto;
+}
+
+.text{
+    color:#333;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.house{
+    display: block;
+    width: 16rem;
+    height:auto;
+    margin: 2rem auto;
+}
