@@ -11,6 +11,7 @@ body{
 
 .bottomPart{
     background-image: linear-gradient(#ffbe00,#ff7c00);
+    padding-top:1rem;
 }
 
 .container{
@@ -39,22 +40,24 @@ body{
 
 
 .title{
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: 600;
+
+    display: block;
+    width: 14rem;
+    margin: 0 auto ;
 }
 .ruleStyle{
     width:15.5rem;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 div.ruleStyle{
-    margin-top:3rem;font-size: 1.125rem
+    margin-top:2rem;
+    font-size: 1.25rem
 }
 
 ol li{
-    margin-top:2rem!important;
+    margin-top:0.5rem!important;
 }
 .refresh-animation {
     animation: rotate 15s linear infinite;
