@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: #FFD560;
+    padding:1rem;
+    height: 100%;
+}
+.ticketPart{
+    margin-top: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+    height:calc(100% - 1rem);
+}
+
+
+.button{
+    display: block;
+    width:80%;
+    height:auto;
+    margin:5rem auto 3rem;
+}
+.title{
+    font-size: 1.25rem;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.linePart{
+    border-top:1px solid #efefef;
+    border-bottom:1px solid #efefef;
+
+    height: 3rem;
+    line-height: 3rem;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.rightPart{
+    color:#999;
+
+}
