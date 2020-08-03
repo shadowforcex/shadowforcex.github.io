@@ -3,9 +3,24 @@
  */
 var answer = [
 
-    ["上海外服成立的时间是：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日",2],
-    ["外服集团目前有几个事业部：","A.4个事业部","B.	6个事业部","C.	3个事业部",1],
-    ["关于上海外服的服务模式，以下表述哪一个是正确的：","A.	上海外服的服务模式是“咨询+服务+技术”  ","B.上海外服的服务模式是“咨询+技术+外包”","C.上海外服的服务模式是“专业+服务+技术”",3]
+    ["上海外服成立的时间是：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["外服集团目前有几个事业部：","A.4个事业部","B.	6个事业部","C.	3个事业部","D.XXX",1],
+    ["关于上海外服的服务模式，以下表述哪一个是正确的：","A.	上海外服的服务模式是“咨询+服务+技术”  ","B.上海外服的服务模式是“咨询+技术+外包”","C.上海外服的服务模式是“专业+服务+技术”","D.XXX",3],
+    ["上海外服成立的时间是1：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是2：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是3：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是4：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是5：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是6：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是7：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是8：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是9：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是10：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是11：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是12：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是13：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是14：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
+    ["上海外服成立的时间是15：","A.1985年8月8日","B.1984年8月8日 ","C.1988年8月8日","D.XXX",2],
 
 ]
 var timeoutId;
@@ -18,9 +33,21 @@ $(document).ready(function(){
 })
 
 function init(){
-    canvas("myCanvas");
+
+
+    for(var i=0;i<15;i++){
+        var temp=$(".gamePartTemp").clone(true);
+        temp.removeClass("gamePartTemp").addClass("gamePart"+i);
+        temp.find("#myCanvas").attr('id','myCanvas'+i);
+        $(".gameBg").append(temp);
+        console.log(i);
+    }
+    $(".gamePart0").addClass("currentGamePart").removeClass("hidden");
+
+    canvas("myCanvas0");
     fillAnwser()
     $(".answer").click(answerListner);
+
 
 }
 
@@ -31,12 +58,15 @@ function answerListner(e){
 
 function fillAnwser(){
 
-    for(var i=0;i<3;i++){
-        $(".gamePartStyle").eq(i).find(".question").html(answer[i][0]);
-        $(".gamePartStyle").eq(i).find(".answer").eq(0).html(answer[i][1]);
-        $(".gamePartStyle").eq(i).find(".answer").eq(1).html(answer[i][2]);
-        $(".gamePartStyle").eq(i).find(".answer").eq(2).html(answer[i][3]);
-        $(".gamePartStyle").eq(i).find(".answer").eq(answer[i][4]-1).addClass("right");
+    for(var i=0;i<15;i++){
+        console.log( $(".gameBg .gamePartStyle"));
+        $(".gameBg .gamePartStyle").eq(i).find(".question").html(answer[i][0]);
+        $(".gameBg .gamePartStyle").eq(i).find(".answer").eq(0).html(answer[i][1]);
+        $(".gameBg .gamePartStyle").eq(i).find(".answer").eq(1).html(answer[i][2]);
+        $(".gameBg .gamePartStyle").eq(i).find(".answer").eq(2).html(answer[i][3]);
+        $(".gameBg .gamePartStyle").eq(i).find(".answer").eq(3).html(answer[i][4]);
+        $(".gameBg .gamePartStyle").eq(i).find(".answer").eq(answer[i][5]-1).addClass("right");
+
     }
 
 }
@@ -75,7 +105,7 @@ function canvas(id){
     var add=1.2;
     context.font=16*add+"px Arial";
 
-    context.fillText(30,20,37);
+    context.fillText(30,19,37);
 
 
     var totaleSeconds=30;
@@ -104,11 +134,11 @@ function canvas(id){
         }
         else if(tempSeconds>20){
             context.font=16*add+"px Arial";
-            context.fillText("0"+(30-tempSeconds),20,37);
+            context.fillText("0"+(30-tempSeconds),19,37);
             context.stroke();
         }else{
             context.font=16*add+"px Arial";
-            context.fillText(30-tempSeconds,20,37);
+            context.fillText(30-tempSeconds,19,37);
             context.stroke();
         }
 
@@ -148,7 +178,7 @@ function switchGamePart(){
 
     var currentEle= $(".currentGamePart");
     var id= currentEle.next().find("canvas")[0].id;
-    if(id=="myCanvas3"){
+    if(id=="myCanvas14"){
 
        end=true;
     }

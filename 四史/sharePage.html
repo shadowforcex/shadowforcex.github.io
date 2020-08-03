@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>保存为images</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <script src="jslib/jquery-1.11.3.min.js"></script>
+
+
+    <script src="jslib/html2canvas.js"></script>
+</head>
+<body class="Body">
+<div>sb图</div>
+<div class="AllWrap relative">
+
+    <button title="保存为图片" style="position: absolute;top:30px;left:100px;" onclick="saveCanvas()">保 存</button>
+    <a href="" download="下载图.png" id="download"></a>
+
+</div>
+
+</body>
+<script src="jslib/jquery-1.11.3.min.js"></script>
+
+
+<script src="jslib/html2canvas.js"></script>
+<script>
+    function saveCanvas() {
+        html2canvas(document.body).then(function(canvas) {
+//            document.body.appendChild(canvas);
+            var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            $("#download").attr("href",imgUri);
+            console.log(imgUri);
+            document.getElementById("download").click();
+        });
+    }
+</script>
+</html>
