@@ -1,0 +1,94 @@
+html{
+    height: 100%;
+    background: #bf0101;
+}
+
+body{
+    background: #bf0101;
+    min-height: 100%;
+}
+
+.headPart{
+    position: relative;
+}
+
+.bgImg{
+
+    display: block;
+    width: 100%;
+    z-index: 0;
+}
+
+.word{
+    position: absolute;
+    display: block;
+    width: 22rem;
+    top:2.2rem;
+    z-index: 1;
+    left:50%;
+    margin-left: -11rem;
+}
+
+.containerOutter{
+    padding: 0 1rem 1rem 1rem;
+}
+
+.container{
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.icon{
+    display: block;
+    position: relative;
+    z-index: 100;
+    margin: -3rem auto 0 auto;
+    width:6rem;
+    height:6rem;
+    border-radius: 3rem;
+    background: #fff;
+    border:3px solid #fff;
+
+}
+#newBee{
+    display: block;
+    position: absolute;
+    top:0;
+    width:100%
+}
+.name{
+    text-align: center;
+    margin-top:0.5rem;
+}
+
+.midIcon{
+    display: block;
+    width:10rem;
+    margin: 1rem auto;
+}
+.largText{
+    font-size: 1.25rem;
+    color:#f6444d;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.bottomPart{
+    position: relative;
+    margin-top: 1rem;
+    background: #f6f6f6;
+    padding:1rem;
+    height:7rem;
+}
+.text{
+
+    line-height: 2.5rem;
+}
+.qrcode{
+    position: absolute;
+    right:1rem;
+    top:1rem;
+    height:5rem;
+    width: 5rem;
+}
