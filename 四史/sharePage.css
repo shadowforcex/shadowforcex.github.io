@@ -71,7 +71,7 @@ body{
 .midIcon{
     display: block;
     width:8rem;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem;
 }
 .largText{
     font-size: 1.25rem;
