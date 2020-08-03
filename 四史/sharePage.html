@@ -12,6 +12,7 @@
 </head>
 <body>
 <img id="newBee">
+<div class="outter">
 <div class="headPart">
     <img class="bgImg" src="img/KVbg.png">
     <img class="word" src="img/KVword.png">
@@ -30,7 +31,7 @@
         </div>
     </div>
 </div>
-
+</div>
 
 <script>
    $(document).ready(function(){
@@ -41,6 +42,7 @@
 //            console.log(imgUri);
 //            document.getElementById("download").click();
             $("#newBee").attr("src",imgUri);
+            $(".outter").addClass("hidden");
         });
     });
 </script>
