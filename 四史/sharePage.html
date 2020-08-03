@@ -37,18 +37,18 @@
 </div>
 
 <script>
-//    $(document).ready(function () {
-//        html2canvas(document.body).then(function (canvas) {
-////            document.body.appendChild(canvas);
-//            var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-//
-//
-////            console.log(imgUri);
-////            document.getElementById("download").click();
-//            $("#newBee").attr("src", imgUri);
-//            $(".outter").remove();
-//        });
-//    });
+    $(document).ready(function () {
+        html2canvas(document.body).then(function (canvas) {
+//            document.body.appendChild(canvas);
+            var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
+
+//            console.log(imgUri);
+//            document.getElementById("download").click();
+            $("#newBee").attr("src", imgUri);
+            $(".outter").remove();
+        });
+    });
 </script>
 
 </body>
