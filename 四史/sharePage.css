@@ -1,11 +1,12 @@
 html{
-    height: 100%;
+
     background: #bf0101;
 }
 
 body{
+
     background: #bf0101;
-    min-height: 100%;
+
 }
 
 .headPart{
@@ -30,21 +31,26 @@ body{
 }
 
 .containerOutter{
-    padding: 0 1rem 1rem 1rem;
+    position: relative;
+    padding: 0 1rem 3rem 1rem;
+    border-radius: 1rem;
+
 }
 
 .container{
     background: #fff;
     border-radius: 0.5rem;
-    padding: 1rem;
+
 }
 .icon{
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 100;
-    margin: -3rem auto 0 auto;
-    width:6rem;
-    height:6rem;
+    margin-left:-2.5rem;
+    left:50%;
+    top:-2rem;
+    width:5rem;
+    height:5rem;
     border-radius: 3rem;
     background: #fff;
     border:3px solid #fff;
@@ -54,17 +60,18 @@ body{
     display: block;
     position: absolute;
     top:0;
-    width:100%
+    width:100%;
+    z-index:1000;
 }
 .name{
     text-align: center;
-    margin-top:0.5rem;
+
 }
 
 .midIcon{
     display: block;
-    width:10rem;
-    margin: 1rem auto;
+    width:8rem;
+    margin: 2rem auto;
 }
 .largText{
     font-size: 1.25rem;
@@ -80,9 +87,10 @@ body{
     background: #f6f6f6;
     padding:1rem;
     height:7rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .text{
-
     line-height: 2.5rem;
 }
 .qrcode{
