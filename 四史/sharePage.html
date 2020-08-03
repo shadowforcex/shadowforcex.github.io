@@ -12,36 +12,39 @@
 </head>
 <body>
 <img id="newBee">
+
 <div class="outter">
-<div class="headPart">
-    <img class="bgImg" src="img/KVbg.png">
-    <img class="word" src="img/KVword.png">
-</div>
-<div class="containerOutter">
-    <div class="container">
-        <img class="icon" src="img/iconBLK.png">
-        <div class="name">微信名</div>
-        <img class="midIcon" src="img/medal-2.png">
-        <div class="largText">我完成了“四史”知识竞答</div>
-        <div class="largText">获得学习徽章一枚</div>
-        <div class="bottomPart">
-            <div class="text">赶快扫描二维码,</div>
-            <div class="text">和我一起答题吧！</div>
-            <img src="img/qrcode.jpg" class="qrcode">
+    <div class="headPart">
+        <img class="bgImg" src="img/KVbg.png">
+        <img class="word" src="img/KVword.png">
+    </div>
+    <div class="containerOutter">
+        <div class="container">
+            <img class="icon" src="img/iconBLK.png">
+
+            <div class="name">微信名</div>
+            <img class="midIcon" src="img/medal-2.png">
+
+            <div class="largText">我完成了“四史”知识竞答</div>
+            <div class="largText">获得学习徽章一枚</div>
+            <div class="bottomPart">
+                <div class="text">赶快扫描二维码,</div>
+                <div class="text">和我一起答题吧！</div>
+                <img src="img/qrcode.jpg" class="qrcode">
+            </div>
         </div>
     </div>
 </div>
-</div>
 
 <script>
-   $(document).ready(function(){
-        html2canvas(document.body).then(function(canvas) {
+    $(document).ready(function () {
+        html2canvas(document.body).then(function (canvas) {
 //            document.body.appendChild(canvas);
             var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 
 //            console.log(imgUri);
 //            document.getElementById("download").click();
-            $("#newBee").attr("src",imgUri);
+            $("#newBee").attr("src", imgUri);
             $(".outter").addClass("hidden");
         });
     });
