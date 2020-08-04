@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="mainCss/mainCss.css">
     <link rel="stylesheet" href="sharePage.css">
     <script src="jslib/jquery-1.11.3.min.js"></script>
-    <script src="jslib/html2canvas1.0.0-rc4.min"></script>
+    <script src="jslib/html2canvas1.0.0-rc4.min.js"></script>
 </head>
 <body>
 <img id="newBee">
@@ -38,7 +38,7 @@
 
 <script>
     $(document).ready(function () {
-        alert(3);
+        alert(4);
         html2canvas(document.body).then(function (canvas) {
 //            document.body.appendChild(canvas);
             var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
