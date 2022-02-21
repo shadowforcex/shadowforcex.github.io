@@ -1,0 +1,385 @@
+html{
+    height: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: #2377d7;
+    font-size: 16px;
+    overflow: hidden;
+}
+.section1{
+    position: absolute;
+    /* top:0; */
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section2{
+    overflow: hidden;
+    position: absolute;
+    top:100%;
+    padding: 3rem 1rem 0;
+    height: 100%;
+}
+.headPart{
+    position: relative;
+    height:65%;
+    width:100%;
+    /* background-image:url(../img/headbg.png);
+    background-repeat: no-repeat;
+    -o-background-size: 100% auto;
+       background-size: 100% auto;
+    background-position: bottom; */
+    background-color: #2377d7;
+    overflow: hidden;
+}
+.fsgLogoPart{
+    position: absolute;
+    /* margin: 5rem auto; */
+    width: 20rem;
+    z-index: 3;
+    bottom:14.25rem;
+    left:50%;
+    margin-left: -10rem;
+}
+
+.fsgTitle{
+    display: block;
+    width: 14rem;
+    margin: -1rem auto;
+}
+.fsgAnimateText{
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width:14rem;
+    top:-1rem;
+    left:3rem;
+  
+  
+    -webkit-animation: logoSize 3s infinite;
+  
+  
+       -moz-animation: logoSize 3s infinite;
+  
+  
+         -o-animation: logoSize 3s infinite;
+  
+  
+            animation: logoSize 3s infinite;
+}
+.fsgBottomText{
+    
+    display: block;
+    width:7rem;
+    margin: 0.5rem 0 0 1.5rem;
+    z-index: 3;
+}
+
+
+
+
+.bottomPart{
+    position: relative;
+    overflow:hidden;
+    height:35%;
+    width:100%;
+}
+.bottomButtonOutter{
+    position: absolute;
+    width: 100%;
+    height: 14rem;
+    bottom: 0.5rem;
+
+}
+.bottomButtonStyle{
+   background: #f29f3d; 
+   height:3rem;
+   line-height: 3rem;
+   width: 80%;
+   margin: 1.25rem auto;
+   border-radius: 0.5rem;
+   color:#fff;
+   text-align: center;
+   font-size: 1.25rem;
+}
+.ruleText{
+    text-align: center;
+    color:#fff;
+    font-size: 1rem;
+    margin-top: -0.5rem;
+}
+
+.fsgBottomImg{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height:14.125rem;
+    z-index:2;
+}
+
+.fsgTower{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+}
+
+
+.fsgBackGround{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+}
+.fsgCloud1{
+    position: absolute;
+    bottom:0;
+    z-index: 4;
+    width: 1.375rem;/*2.75rem*/
+    height:1.40625rem;/*2.8125rem*/
+    top: 8rem;
+    left: 3.5rem;
+   
+}
+.fsgCloud2{
+    position: absolute;
+    bottom:0;
+    z-index: 4;
+    width: 1.9375rem;/*3.875rem*/
+    height:1.1875rem;/*2.375rem*/
+    top: 2.5rem;
+    right: 2.5rem;
+   
+}
+
+.arrow{
+    width:2.3125rem;
+    height:1.2142857142857rem;
+    -webkit-animation: test1 1s ;
+       -moz-animation: test1 1s infinite;
+         -o-animation: test1 1s infinite;
+            -webkit-animation: test1 1s infinite;
+               animation: test1 1s infinite;
+    display: block;
+    margin: 0 auto;
+}
+.arrow2{
+    width:2.3125rem;
+    height:1.2142857142857rem;
+    -webkit-animation: test1 1s ;
+       -moz-animation: test1 1s infinite;
+         -o-animation: test1 1s infinite;
+            -webkit-animation: test1 1s infinite;
+               animation: test1 1s infinite;
+    display: block;
+
+    position: absolute;
+    top:0.5rem;
+    left:50%;
+    margin-left: -1.15625rem;
+}
+
+.fsgLogo{
+    position: absolute;
+    width: 4.5rem;
+    top: 1rem;
+    left: 1rem;
+}
+.fsgLogo2{
+    position: absolute;
+    width: 8rem;
+    top: 1rem;
+    right: 0.5rem;
+}
+
+.rulesText{
+    position: relative;
+    background-color: #fff;
+    color:#000;
+    padding:0.5rem;
+    height:90%;
+    overflow: scroll;
+    word-break: break-all;
+
+}
+.redText{
+    color: red;
+}
+
+
+
+
+
+@-webkit-keyframes test1
+{
+    0% { margin-top:0.5rem; }
+    50%{margin-top: 0.9rem;}
+    100%{margin-top: 0.5rem;}
+}
+
+
+
+@-moz-keyframes test1
+{
+    0% { margin-top:0.5rem; }
+    50%{margin-top: 0.9rem;}
+    100%{margin-top: 0.5rem;}
+}
+
+
+
+@-o-keyframes test1
+{
+    0% { margin-top:0.5rem; }
+    50%{margin-top: 0.9rem;}
+    100%{margin-top: 0.5rem;}
+}
+
+
+
+@keyframes test1
+{
+    0% { margin-top:0.5rem; }
+    50%{margin-top: 0.9rem;}
+    100%{margin-top: 0.5rem;}
+}
+
+
+
+
+
+@-webkit-keyframes logoSize{
+    0% { 
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    2%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    4%{
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    6%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    8%{ width:14rem;
+        top:-1rem;
+        left:3rem;}
+    100%{ width:14rem;
+        top:-1rem;
+        left:3rem;} 
+}
+
+
+
+
+
+@-moz-keyframes logoSize{
+    0% { 
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    2%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    4%{
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    6%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    8%{ width:14rem;
+        top:-1rem;
+        left:3rem;}
+    100%{ width:14rem;
+        top:-1rem;
+        left:3rem;} 
+}
+
+
+
+
+
+@-o-keyframes logoSize{
+    0% { 
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    2%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    4%{
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    6%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    8%{ width:14rem;
+        top:-1rem;
+        left:3rem;}
+    100%{ width:14rem;
+        top:-1rem;
+        left:3rem;} 
+}
+
+
+
+
+
+@keyframes logoSize{
+    0% { 
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    2%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    4%{
+        width:14rem;
+        top:-1rem;
+        left:3rem;
+     }
+    6%{
+        width:16rem;
+        top:-1.4rem;
+        left:2rem;
+     }
+    8%{ width:14rem;
+        top:-1rem;
+        left:3rem;}
+    100%{ width:14rem;
+        top:-1rem;
+        left:3rem;} 
+}
+
