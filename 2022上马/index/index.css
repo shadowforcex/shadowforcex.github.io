@@ -49,18 +49,18 @@ body{
 
 .fsgTitle{
     display: block;
-    width: 14rem;
-    margin: -1rem auto;
+    width: 15rem;
+    margin: -2rem auto;
 }
 .fsgAnimateText{
     position: absolute;
     z-index: 3;
     display: block;
-    width:14rem;
-    top:-1rem;
+    width:15rem;
+    top:-2rem;
     left:3rem;
   
-  
+
     -webkit-animation: logoSize 3s infinite;
   
   
@@ -70,13 +70,13 @@ body{
          -o-animation: logoSize 3s infinite;
   
   
-            animation: logoSize 3s infinite;
+            animation: logoSize 3s infinite; 
 }
-.fsgBottomText{
+.fsgBottomText{ 
     
     display: block;
     width:7rem;
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 1.5rem 0 0 1.5rem;
     z-index: 3;
 }
 
@@ -254,132 +254,128 @@ body{
 
 
 
-
 @-webkit-keyframes logoSize{
     0% { 
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     2%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
     4%{
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     6%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
-    8%{ width:14rem;
-        top:-1rem;
+    8%{ width:15rem;
+        top:-2rem;
         left:3rem;}
-    100%{ width:14rem;
-        top:-1rem;
+    100%{ width:15rem;
+        top:-2rem;
         left:3rem;} 
 }
-
 
 
 
 
 @-moz-keyframes logoSize{
     0% { 
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     2%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
     4%{
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     6%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
-    8%{ width:14rem;
-        top:-1rem;
+    8%{ width:15rem;
+        top:-2rem;
         left:3rem;}
-    100%{ width:14rem;
-        top:-1rem;
+    100%{ width:15rem;
+        top:-2rem;
         left:3rem;} 
 }
-
 
 
 
 
 @-o-keyframes logoSize{
     0% { 
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     2%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
     4%{
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     6%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
-    8%{ width:14rem;
-        top:-1rem;
+    8%{ width:15rem;
+        top:-2rem;
         left:3rem;}
-    100%{ width:14rem;
-        top:-1rem;
+    100%{ width:15rem;
+        top:-2rem;
         left:3rem;} 
 }
 
 
 
 
-
 @keyframes logoSize{
     0% { 
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     2%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
     4%{
-        width:14rem;
-        top:-1rem;
+        width:15rem;
+        top:-2rem;
         left:3rem;
      }
     6%{
         width:16rem;
-        top:-1.4rem;
-        left:2rem;
+        top:-2.4rem;
+        left:2.5rem;
      }
-    8%{ width:14rem;
-        top:-1rem;
+    8%{ width:15rem;
+        top:-2rem;
         left:3rem;}
-    100%{ width:14rem;
-        top:-1rem;
+    100%{ width:15rem;
+        top:-2rem;
         left:3rem;} 
 }
 
