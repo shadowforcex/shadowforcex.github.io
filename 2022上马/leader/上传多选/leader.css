@@ -1,0 +1,60 @@
+body{
+    background: #7bdcff;
+    color:#000;
+}
+.indexPanel{
+    background-color: #fff;
+    padding:0.75rem;
+}
+.headTitle{
+    background-color:#2377d7 ;
+    color:#fff;
+    font-size: 1rem;
+    text-align: center;
+    height:3rem;
+    line-height: 3rem;
+}
+.titleline{
+    height:3rem;
+    line-height: 3rem;
+    color:#146dd5;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.titleline span{
+    color:red;
+}
+.inputLine{
+    height:3rem;
+    line-height: 3rem;
+    border: 1px solid #aaa;
+    border-radius: 0.5rem;
+}
+.indexOutter{
+    padding:0.75rem;
+}
+.upLoadOutter{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border: 1px dashed #aaa;
+    min-height:3rem;
+    line-height: 1.5rem; 
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    overflow: hidden;
+}
+.imageUpload{
+
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+
+}
+
+
+

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022上海半马</title>
+    <link rel="stylesheet" href="../mainCss/mainCss.css">
+    <link rel="stylesheet" href="leader.css">
+    <script src="../jslib/jquery-1.11.3.min.js"></script>
+    <script src="../jslib/sweetAlert.js"></script>
+    <script src="leader.js"></script>
+
+</head>
+<body>
+    <div class="uploadPart displayFlex hidden">
+        <img class="uploadIcon" src="../img/imageIcon.png">
+        <div class="uploadName"></div>
+        <img class="uploadDel" src="../img/delet.png">
+        <div class="uploadNum hidden"></div>
+        <img class="img">
+    </div>
+    <div class="headTitle">
+        2022上海办成马拉松上海外服企业精英赛
+    </div>
+    <div class="indexOutter">
+        <div class="indexPanel">
+            <div class="titleline">
+                <span>*</span>
+                公司全称
+            </div>
+            <input id="company" class="inputLine company required">
+
+            <div class="titleline">
+                <span>*</span>
+                队名
+            </div>
+            <div class="tipsLine ">
+                (为确保企业赛特色，建议以公司简称为宜，日“上海外服队”)
+            </div>
+            <input  id="partyName" class="inputLine partyName required">
+            <div class="titleline  required">
+                <span>*</span>
+                公司LOGO
+            </div>
+            <div  class="tipsLine ">用于参赛服LOGO烫印、制作标准版队旗以及制作现场企业品牌墙。请提供AI 或EPS 格式文件，如LOGO 有应用要求请附件上传说明，请务必以公司名称命名文件之后再行上传。</div>
+            <img class="sampleImg" src="../img/logoSample.png">
+            <a class="upLoadOutter">
+                <input id="uploadLogo" class="imageUpload uploadLogo required" type="file" name="test">
+               <span>+</span>选择上传文件1MB以内
+            </a>
+            <div class="titleline">
+                <span>*</span>
+                是否需要制作标准版队旗
+            </div>
+            <div class="tipsLine">
+                仅提供标准版制作，具体示例参考下方图片
+            </div>
+            <img class="sampleImg" src="../img/teamSample.png">
+            <div class="choicePart flagImg required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+        </div>
+        <div class="indexPanel">
+            <div class="titleText">队长信息</div>
+            <div class="titleline">
+                <span>*</span>
+                姓名
+            </div>
+            <input id="leaderName" class="inputLine leaderName required">
+            <div class="titleline">
+                <span>*</span>
+                性别
+            </div>
+            <div id="leaderSex" class="choicePart leaderSex required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+
+            <div class="titleline">
+                <span>*</span>
+                国籍
+            </div>
+            <div id="leaderNationality" class="choicePart leaderNationality required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">中国</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">外籍</div>
+                </div>
+            </div>
+
+            <div class="titleline ">
+                <span>*</span>
+                证件类型
+            </div>
+            <select id="leaderIdType" class="selectPart leaderIdType required">
+                <option class="hidden">请选择证件类型</option>
+                <option>身份证</option>
+                <option>护照</option>
+            </select>
+
+            <div class="titleline ">
+                <span>*</span>
+                证件号
+            </div>
+            <input id="leaderID" class="inputLine leaderID required">
+
+            <div class="titleline ">
+                <span>*</span>
+                手机
+            </div>
+            <input id="leaderTel" class="inputLine leaderTel required">
+
+            <div class="titleline ">
+                <span>*</span>
+                随身码
+            </div>
+            <div  class="tipsLine">截图请勿隐藏姓名，请务必以选手姓名命名文件并确认随申码为绿色之后，再行上传，以免影响参赛</div>
+            <a class="upLoadOutter">
+                <input id="learHealthCode" class="imageUpload learHealthCode required" type="file" name="test">
+               <span>+</span>选择上传文件1MB以内
+            </a>
+
+            <div class="titleline">
+                <span>*</span>
+                往年参与线下赛事名称
+            </div>
+            <div  class="tipsLine">请列举一项成功完赛赛事，包含参赛年份、赛事全称，如“2020上海马拉松”</div>
+            <input id="leaderEx" class="inputLine leaderEx required">
+
+            <div class="titleline">
+                <span>*</span>
+                往年线下赛事成绩
+            </div>
+            <div  class="tipsLine">如“3小时45分”</div>
+            <input id="leaderScore" class="inputLine leaderScore required">
+
+            <div class="titleline">
+                <span>*</span>
+                往年参与线下赛事的项目
+            </div>
+            <div  class="tipsLine">如全马、半马、10公里、5公里，最少须5公里以上</div>
+            <input id="leaderProgess" class="inputLine leaderProgess required">
+
+            <div class="titleline">
+                <span>*</span>
+                赛服尺码
+            </div>
+            <img class="sampleImg" src="../img/size.png">
+            <select id="leaderSize" class="selectPart leaderSize required">
+                <option class="hidden">选择尺码</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>2XL</option>
+                <option>3XL</option>
+                <option>4XL</option>
+            </select>
+        </div>
+        <div class="indexPanel">
+            <div class="titleText">队员1</div>
+            <div  class="tipsLine">请输入队员的姓名、性别、手机号、确保输入准确，并通知队员以同样信息分别完善队员报名。</div>
+            <div class="titleline">
+                <span>*</span>
+                姓名
+            </div>
+            <input id="memberName1" class="inputLine memberName1 required">
+            <div class="titleline">
+                <span>*</span>
+                性别
+            </div>
+            <div id="memberSex1" class="choicePart memberSex1 required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+
+            <div class="titleline ">
+                <span>*</span>
+                手机
+            </div>
+            <input id="memberTel1" class="inputLine memberTel1 required">
+
+        </div>
+
+        <div class="indexPanel">
+            <div class="titleText">队员2</div>
+            <div  class="tipsLine">请输入队员的姓名、性别、手机号、确保输入准确，并通知队员以同样信息分别完善队员报名。</div>
+            <div class="titleline">
+                <span>*</span>
+                姓名
+            </div>
+            <input id="memberName2" class="inputLine memberName2 required">
+            <div class="titleline">
+                <span>*</span>
+                性别
+            </div>
+            <div id="memberSex2" class="choicePart memberSex2 required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+
+            <div class="titleline ">
+                <span>*</span>
+                手机
+            </div>
+            <input id="memberTel2" class="inputLine memberTel2 required">
+
+        </div>
+
+        <div class="indexPanel">
+            <div class="titleText">队员3</div>
+            <div  class="tipsLine">请输入队员的姓名、性别、手机号、确保输入准确，并通知队员以同样信息分别完善队员报名。</div>
+            <div class="titleline">
+                <span>*</span>
+                姓名
+            </div>
+            <input id="memberName3" class="inputLine memberName3 required">
+            <div class="titleline">
+                <span>*</span>
+                性别
+            </div>
+            <div id="memberSex3" class="choicePart memberSex3 required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+
+            <div class="titleline ">
+                <span>*</span>
+                手机
+            </div>
+            <input id="memberTel3" class="inputLine memberTel3 required">
+
+        </div>
+
+        <div class="indexPanel">
+            <div class="titleText">队员4</div>
+            <div  class="tipsLine">请输入队员的姓名、性别、手机号、确保输入准确，并通知队员以同样信息分别完善队员报名。</div>
+            <div class="titleline">
+                <span>*</span>
+                姓名
+            </div>
+            <input id="memberName1" class="inputLine memberName4 required">
+            <div class="titleline">
+                <span>*</span>
+                性别
+            </div>
+            <div id="memberSex4" class="choicePart memberSex4 required">
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck checked"></div>
+                    </div>
+                    <div class="radioText">是</div>
+                </div>
+                <div class="choiceLine displayFlex">
+                    <div class="radioOutter">
+                        <div class="radioCheck"></div>
+                    </div>
+                    <div class="radioText">否</div>
+                </div>
+            </div>
+
+            <div class="titleline ">
+                <span>*</span>
+                手机
+            </div>
+            <input id="memberTel4" class="inputLine memberTel4 required">
+
+        </div>
+        <div class="saveBtn">保存</div>
+        <div class="submitBtn">提交</div>
+    </div>
+</body>
+</html>
