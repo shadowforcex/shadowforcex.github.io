@@ -80,13 +80,21 @@
 
     @media (min-width: 376px) {
         html {
-            font-size: 18px;
+            font-size: 17px;
         }
     }
 
+
     @media (min-width: 361px) and (max-width: 375px) {
         html {
-            font-size: 16px;
+            font-size: 15px;
+
+        }
+    }
+    @media (min-width: 361px) and (max-width: 375px) and (min-height:800px){
+        html {
+            font-size: 17px;
+
         }
     }
 
@@ -102,8 +110,7 @@
             font-size: 12px;
         }
     }
-
-
+   
 
 
     .mainBG {
@@ -132,7 +139,7 @@
         width: 100%;
 
         overflow: hidden;
-        padding: 2.5rem 2rem;
+        /* padding: 2.5rem 2rem; */
     }
 
 
@@ -140,9 +147,13 @@
         display: block;
         width: 6.375rem;
         height: 1.625rem;
+        margin-top: 2.5rem;
+        margin-left: 2rem;
     }
 
     .headText {
+        position: relative;
+        z-index: 1;
         width: 100%;
         text-align: center;
         font-size: 1.25rem;
@@ -154,29 +165,47 @@
     }
 
     .headPic {
-        width: 100%;
+        display: block;
+        width: 94%;
+        margin: 0 auto;
     }
 
     .btn {
         display: block;
-        width: 100%;
+        width: calc(100% - 4rem);
         height: 2.5rem;
-        line-height: 2.2rem;
+        line-height: 2.3rem;
         background: linear-gradient(180deg, #F1B04F 0%, #B67B1C 100%);
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
         border-radius: 2rem;
         border: 1px solid #FFFFFF;
-        margin-bottom: 1rem;
-        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
         font-family: PingFangSC-Semibold, PingFang SC;
         font-weight: 600;
         color: #FFFFFF !important;
         text-align: center;
+        margin-left: 2rem;
 
     }
 
     a:visited {
         color: #fff;
+    }
+
+    .square {
+        position: absolute;
+        top:1rem;
+        left:2rem;
+        width: calc(100% - 4rem);
+        height: 2rem;
+        background: #F7F7F7;
+        transform: skew(160deg);
+        z-index: 0;
+    }
+    .textOutter{
+        margin-top: 1.5rem;
+        position: relative;
     }
 </style>
 
@@ -186,12 +215,17 @@
             <div class="containerForBorder">
                 <div class="container">
                     <img class="logo" src="logo.png">
-                    <div class="headText">
-                        华谊外派员工（家庭）
+                    <div class="textOutter">
+                        <div class="square"></div>
+                        <div class="headText">
+                            华谊外派员工（家庭）
+                        </div>
+                        <div class="headText">
+                            应急关爱服务
+                        </div>
+
                     </div>
-                    <div class="headText">
-                        应急关爱服务
-                    </div>
+                   
                     <img class="headPic" src="headPic.png">
                     <a href="tel:400-500-600" class="btn">绿通服务（拨打电话）</a>
                     <a href="https://www.wjx.cn/vm/Pp8P5oa.aspx#" class="btn">绿通服务（在线留言）</a>
